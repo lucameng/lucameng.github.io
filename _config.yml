@@ -10,7 +10,7 @@ url:
 # Owner/author information
 owner:
   name:           Astrc
-  avatar:         avatar.jpg
+  avatar:         blackcat.jpg
   bio:            "I think I left my consciousness in the 6th dimension."
   email:          luca.meng@outlook.com
   # Social networking links used in footer. Update and remove as you like.
@@ -35,7 +35,7 @@ google_verify:
 bing_verify:         
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
+timezone:    China/Beijing
 future:      false  # publish future dated posts --  true, false (default) 
 highlighter: rouge
 markdown:    kramdown
