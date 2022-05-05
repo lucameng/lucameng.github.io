@@ -1,23 +1,24 @@
 {
-  "name": "jekyll-theme-chirpy",
-  "version": "5.1.0",
-  "description": "A minimal, responsive, and powerful Jekyll theme for presenting professional writing.",
+  "name": "hpstr-theme",
+  "author": "Michael Rose <michael@mademistakes.com>",
+  "homepage": "http://mmistakes.github.io/jekyll-theme-hpstr/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cotes2020/jekyll-theme-chirpy.git"
+    "url": "git://github.com/mmistakes/jekyll-theme-hpstr.git"
   },
-  "author": "Cotes Chung",
-  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cotes2020/jekyll-theme-chirpy/issues"
+    "url": "https://github.com/mmistakes/jekyll-theme-hpstr/issues"
   },
-  "homepage": "https://github.com/cotes2020/jekyll-theme-chirpy#readme",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-insert": "^0.5.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-uglify": "^3.0.2",
-    "uglify-js": "^3.14.3"
+    "grunt": "~0.4.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-jshint": "~0.6.3",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-watch": "~0.5.2",
+    "grunt-contrib-imagemin": "~0.2.0",
+    "grunt-svgmin": "~0.2.0"
   }
 }
