@@ -1,3 +1,3 @@
 ---
-layout: hentry
+layout: home
 ---
