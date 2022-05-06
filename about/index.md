@@ -7,30 +7,16 @@ comments: true
 modified: 2022-05-06
 ---
 
+`Astrc`, derived from `Astro`, is just a alias I'd like to name stuff of mine, which can also be considered as a nickname. If you know `Jacques Webster`, aka `Travis Scott`and also `La Flame` in Franch, one of the most famous rapper in the world, then you know what it is.
+`Astro` is one of the `Ad-Libs`[^1] created by `Travis Scott`. La Flame also came out with a hit album `ASTROWORLD`on August 3, 2018.
+Do an ad-lib anytime you want! For me it'll be like "ASTRO!!!".
 
 
+## README(X):
 
+* An undergraduate student at Department of Robot Engineering, Peking University.
 
+Check my Github down below.
+<div markdown="0"><a href="https://github.com/lucameng/" class="btn btn-success">Github</a></div>
 
-
-They say three times the charm, so here is another free responsive Jekyll blog theme for you. I've learned a ton since open sourcing my first two themes [on Github](http://github.com/mmistakes), and wanted to try a few new things this time around. 
-
-If you've used any of [my other themes](http://mademistakes.com/work/jekyll-themes/) most of this should be familiar territory...
-
-## HPSTR Features:
-
-* Compatible with Jekyll 3 and GitHub Pages.
-* Responsive templates for post, page, and post index `_layouts`. Looks great on mobile, tablet, and desktop devices.
-* Gracefully degrades in older browsers. Compatible with Internet Explorer 8+ and all modern browsers.  
-* Sweet animated menu.
-* Background image support.
-* Support for large images to call out your favorite posts.
-* Optional [Disqus](http://disqus.com) comments.
-* Simple and clear permalink structure[^1].
-* [Open Graph](https://developers.facebook.com/docs/opengraph/) and [Twitter Cards](https://dev.twitter.com/docs/cards) support for a better social sharing experience.
-* [Custom 404 page]({{ site.url }}/404.html) to get you started.
-* [Syntax highlighting]({{ site.url }}/code-highlighting-post/) stylesheets to make your code examples look snazzy.
-
-<div markdown="0"><a href="{{ site.url }}/theme-setup/" class="btn btn-info">Theme Setup</a> <a href="https://github.com/mmistakes/jekyll-theme-hpstr" class="btn btn-success">Download HPSTR</a></div>
-
-[^1]: Example: *domain.com/category-name/post-title*
+[^1]: [Ad-Libs](https://rhymemakers.com/rap-ad-libs/): short for "ad libitum" which means “at ones pleasure”, usually exist in hip-hop songs.
