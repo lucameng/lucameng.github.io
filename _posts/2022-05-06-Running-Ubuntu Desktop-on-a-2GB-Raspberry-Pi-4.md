@@ -65,8 +65,8 @@ $ sudo -i
 This will prompt you for your password and put you into **root mode** where you can enter the following commands:
 
 ```shell
-# echo lz4 >> /etc/initramfs-tools/modules
-# echo z3fold >> /etc/initramfs-tools/modules
+echo lz4 >> /etc/initramfs-tools/modules
+echo z3fold >> /etc/initramfs-tools/modules
 update-initramfs -u
 ```
 
