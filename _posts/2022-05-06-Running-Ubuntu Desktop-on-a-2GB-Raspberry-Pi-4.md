@@ -35,7 +35,7 @@ Since zswap is supported by default, you can enable it with a simple command.
 
 Enter the following into your terminal:
 
-```bash
+```shell
 $ sudo sed -i -e 's/$/ zswap.enabled=1/' /boot/firmware/cmdline.txt
 ```
 
@@ -64,9 +64,9 @@ $ sudo -i
 
 This will prompt you for your password and put you into **root mode** where you can enter the following commands:
 
-```bash
-echo lz4 >> /etc/initramfs-tools/modules
-echo z3fold >> /etc/initramfs-tools/modules
+```shell
+# echo lz4 >> /etc/initramfs-tools/modules
+# echo z3fold >> /etc/initramfs-tools/modules
 update-initramfs -u
 ```
 
