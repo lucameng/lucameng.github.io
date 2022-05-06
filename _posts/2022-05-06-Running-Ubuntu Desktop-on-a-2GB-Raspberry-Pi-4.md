@@ -17,7 +17,7 @@ At Canonical we’re proud to be able to offer a [full Ubuntu Desktop experience
 
 However the full desktop environment is quite a lot for the Pi to handle.That's why users are suggested to models with either 4GB or 8GB of RAM to be confident that it will perform well. Ubuntu 22.04 LTS released few days ago, which can lower that barrier to entry, for RPI. This means targeting a viable Desktop experience on Raspberry Pi 4 2GB models.
 
-The secret to this optimisation is a Linux kernel feature called zswap. In this blog, I’ll show you how to enable this functionality today and benefit from the upcoming performance boost that will come as standard in 22.04.
+The secret to this optimisation is a Linux kernel feature called zswap. In this blog, I’ll show you how to enable this functionality today and benefit from the erformance boost that comes as standard in 22.04.
 
 ## What is ZSWAP?
 

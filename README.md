@@ -1,3 +1,7 @@
+# Meng Liang's blog
+
+Check [this](https://lucameng.github.io/) out!
+
 # HPSTR Jekyll Theme
 
 * Modern and minimal design.
