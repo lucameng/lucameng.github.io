@@ -3,6 +3,7 @@ layout: post
 title: Linux settings that are useful but turned off by default
 description: "一些Linux中实用却默认关闭的参数设置"
 modified: 2022-05-06
+tags: [ROS, 嵌入式]
 image:
   path: /images/abstract-5jpg
   feature: abstract-5.jpg
