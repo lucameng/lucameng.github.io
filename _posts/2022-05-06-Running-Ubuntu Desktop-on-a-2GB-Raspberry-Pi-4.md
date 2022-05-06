@@ -3,6 +3,7 @@ layout: post
 title: Running Ubuntu Desktop on a 2GB Raspberry Pi 4
 description: "To some extent, solve the problem of low memory raspberry PI."
 modified: 2022-05-06
+tags: [Linux]
 image:
   path: /images/abstract-10.jpg
   feature: abstract-10.jpg
