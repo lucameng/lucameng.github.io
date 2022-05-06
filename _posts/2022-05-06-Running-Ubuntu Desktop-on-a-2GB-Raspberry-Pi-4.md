@@ -111,4 +111,4 @@ If you’ve configured things correctly then the output should look like this:
 
 More information, see [this](https://ubuntu.com//blog/how-low-can-you-go-running-ubuntu-desktop-on-a-2gb-raspberry-pi-4).
 
-In future blogs, I will use this RPI to learn **ROS** and **SLAM** algorithms. See you later.
+In future blogs, I will show how I use this RPI to learn **ROS** and **SLAM** algorithms. See you later.
