@@ -88,8 +88,4 @@ exclude:
   - spec
   - tmp
 
-  
-emptyArray: []
 
-comments:
-  receiver: https://{{your-receiver-site}}/api/PostComment}}
