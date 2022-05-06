@@ -26,7 +26,7 @@ Do an ad-lib anytime you want! For me it'll be like "ASTRO!!!".
 * **copyright**: for technical posts, maybe there will be a license later on.
 
 Check my Github down below.
-<center><div markdown="0"><a href="https://github.com/lucameng/" class="btn btn-success">Github</a></div></center>
+<div markdown="0"><a href="https://github.com/lucameng/" class="btn btn-success">Github</a></div>
 
 
 
