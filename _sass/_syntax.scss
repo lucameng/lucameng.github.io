@@ -7,11 +7,11 @@ figure.highlight {
   position: relative;
   margin-bottom: 1.5em;
   color: #d0d0d0;
-  font-size: 1em;
+	@include font-rem(12);
   line-height: 1.5;
   border: 1px solid darken($body-color, 5);
   border-radius: 3px;
-  background-color: #093d36;
+  background-color: #010c0a;
 
   .highlight {
     margin: 0;
