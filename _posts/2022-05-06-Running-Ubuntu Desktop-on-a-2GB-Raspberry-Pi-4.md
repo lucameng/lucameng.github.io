@@ -9,7 +9,7 @@ image:
 ---
 <figure>
 	<center><a href="/images/RPI.image"><img src="/images/RPI.image" alt=""></a>
-	<figcaption>Raspberry Pi</a>.</figcaption></center>
+	<figcaption>Raspberry Pi</figcaption></center>
 </figure>
 
 At Canonical we’re proud to be able to offer a [full Ubuntu Desktop experience on the Raspberry Pi 4](https://ubuntu.com/blog/build-a-raspberry-pi-desktop-with-an-ubuntu-heart). Ubuntu Desktop provides everything you need to develop software and even deploy it to Ubuntu Server on devices like the Raspberry Pi Zero 2 W.
@@ -106,7 +106,7 @@ If you’ve configured things correctly then the output should look like this:
 
 <figure>
 	<center><a href="/images/RPII.jpg"><img src="/images/RPII.jpg" alt=""></a>
-	<figcaption>Test on Ubuntu 20.04 mate</a>.</figcaption></center>
+	<figcaption>Test on Ubuntu 20.04 mate</figcaption></center>
 </figure>
 
 More information, see [this](https://ubuntu.com//blog/how-low-can-you-go-running-ubuntu-desktop-on-a-2gb-raspberry-pi-4).
