@@ -23,7 +23,7 @@ body {
 }
 
 .entry-content {
-	@include font-size(18);
+	@include font-size(16);
 
 	// Dotted line underlines for links
 	p > a,
@@ -284,7 +284,7 @@ header .entry-meta {
 		}
 
 		@media #{$large} {
-			max-width: 800px;
+			max-width: 1000px;
 			margin: 50px auto 30px auto;
 			padding: 50px 80px;
 
