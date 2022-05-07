@@ -3,13 +3,14 @@ layout: post
 title: Linux settings that are useful but turned off by default
 description: "一些Linux中实用却默认关闭的参数设置"
 modified: 2022-05-06
-tags: [ROS, 嵌入式]
+tags: [Linux]
 image:
   path: /images/abstract-5jpg
   feature: abstract-5.jpg
 ---
+## What is your shell?
 
-Reminded that when we talk about Shell, it usually refer to 'Bash', instead of 'Fish' or 'Zsh', etc. Bash, which is short for 'Bourne Again shell', as its name implies, is an extension of the Bourne shell. And Is the most common shell and is the default shell for most current Linux distros.  
+Reminded that when we talk about Shell, it usually refers to 'Bash', instead of 'Fish' or 'Zsh', etc. Bash, which is short for 'Bourne Again shell', as its name implies, is an extension of the Bourne shell. And Is the most common shell and is the default shell for most current Linux distros.  
 
 To check your type of shell, you can type this in your terminal:
 
