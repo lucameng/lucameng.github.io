@@ -1,4 +1,4 @@
-# Meng Liang's blog
+# Luca's blog
 
 Check [this](https://lucameng.github.io/) out!
 
