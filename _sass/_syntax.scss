@@ -10,8 +10,8 @@ figure.highlight {
 	@include font-rem(12);
   line-height: 1.5;
   border: 1px solid darken($body-color, 5);
-  border-radius: 3px;
-  background-color: #010c0a;
+  border-radius: 12px;
+  background-color: #282c34;
 
   .highlight {
     margin: 0;
