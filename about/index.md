@@ -11,7 +11,9 @@ modified: 2022-05-06
 
 `Astrc`, derived from `Astro`, can be also considered as a nickname. If you know `Jacques Webster`, aka `Travis Scott`and also `La Flame` in Franch, one of the most famous rappers and artists in the world, then you know what it is.
 
-`Astro` is one of the `Ad-Libs`[^1] created by Travis Scott. La Flame also came out with a hit album `ASTROWORLD`on August 3,2018.
+`Astro` is one of the `Ad-Libs`[^1] created by Travis Scott. He also has another one, 'Straight up!'. Rappers always have `ad-libs` in there hip-hop music. It can be 'Yeah', 'Oh', or the most famous one, 'Skrrrrrrr~' 
+
+La Flame also came out with a hit album `ASTROWORLD`on August 3, 2018. That's how ASTROWORLD comes.
 
 <figure>
 	<center><a href="/images/astroworld.jpeg"><img src="/images/astroworld.jpeg" alt=""></a>
