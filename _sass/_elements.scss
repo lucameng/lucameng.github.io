@@ -44,8 +44,9 @@ figure {
     @media #{$large} {
 
       img {
-        width: 480px;
+        width: 400px;
         float: left;
+	margin-left: 10px
         margin-right: 10px;
       }
 
