@@ -25,12 +25,10 @@ Do an ad-lib anytime you want! For me it'll be like "ASTRO!!!".
 * **langueges**: both written in English and 中文 are possible, just to improve my English writting skills.  
 * **copyright**: for technical posts, maybe there will be a license later on.
 
-Check my Github down below.
-<div markdown="0"><a href="https://github.com/lucameng/" class="btn btn-success">Github</a></div>
 
 
 
-
+___
 
 [^1]: [Ad-Libs](https://rhymemakers.com/rap-ad-libs/): short for "ad libitum" which means “at ones pleasure”, usually exist in hip-hop songs.  
 [^2]: slack off: 俗称划水、摸鱼。  
