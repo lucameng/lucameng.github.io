@@ -71,7 +71,6 @@ If you'd like to share any other useful command, please let me know.
 
 <br/>
 <br/>
-<br/>
 
 ___
 
