@@ -13,7 +13,7 @@ image:
 	<figcaption>Raspberry Pi</figcaption></center>
 </figure>
 
-Canonical are proud to be able to offer a [full Ubuntu Desktop experience on the Raspberry Pi 4](https://ubuntu.com/blog/build-a-raspberry-pi-desktop-with-an-ubuntu-heart). Ubuntu Desktop provides everything you need to develop software and even deploy it to Ubuntu Server on devices like the Raspberry Pi Zero 2 W.
+[Canonical](https://canonical.com/) is proud to be able to offer a [full Ubuntu Desktop experience on the Raspberry Pi 4](https://ubuntu.com/blog/build-a-raspberry-pi-desktop-with-an-ubuntu-heart). Ubuntu Desktop provides everything you need to develop software and even deploy it to Ubuntu Server on devices like the Raspberry Pi Zero 2 W.
 
 However the full desktop environment is quite a lot for the Pi to handle.That's why users are suggested to models with either 4GB or 8GB of RAM to be confident that it will perform well. Ubuntu 22.04 LTS released few days ago, which can lower that barrier to entry, for RPI. This means targeting a viable Desktop experience on Raspberry Pi 4 2GB models.
 
