@@ -33,6 +33,8 @@ Do an ad-lib anytime you want! For me it'll be like "ASTRO!!!".
 * **langueges**: both written in English and 中文 are possible, just to improve my English writting skills.  
 * **comments**: send me an Email.  
 
+ Still confused? See [Tips in ASTROWORLD](https://lucameng.github.io/post-test/)
+
 <br/>
 <br/>
 <br/>
