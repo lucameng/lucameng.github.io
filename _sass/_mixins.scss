@@ -57,9 +57,9 @@
 @mixin footnote-size($size) {
   font-size: 0px + $size;
   font-size: 0rem + $size / $doc-font-size;
-  line-height: 0 ;
-  margin-bottom: 0px + $doc-line-height;
-  margin-bottom: 0rem + ($doc-line-height / $doc-font-size);
+  line-height: 2 ;
+  margin-bottom: 0px;
+  margin-bottom: 0rem ;
 }
 
 /* Just the REMs */
