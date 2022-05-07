@@ -1,11 +1,13 @@
 ---
 layout: page
-title: About Astrc
+title: About
 image:
   feature: abstract-7.jpg
 comments: true
 modified: 2022-05-06
 ---
+
+## Astrc
 
 `Astrc`, derived from `Astro`, which can also be considered as a nickname. If you know `Jacques Webster`, aka `Travis Scott`and also `La Flame` in Franch, one of the most famous rappers and artists in the world, then you know what it is.
 
@@ -13,17 +15,17 @@ modified: 2022-05-06
 Do an ad-lib anytime you want! For me it'll be like "ASTRO!!!".
 
 
-## About ME:
+## ME:
 
 * An undergraduate student at Department of Robot Engineering, Peking University.
 * Good at `slack off`[^2], and `screw up`[^3].
 
-## About ASTROWORLD:  
+## ASTROWORLD:  
 
 `ASTROWORLD` is an alias I'd like to name my PLACE, presented by who I am.  
 * **contents**: most of my posts are for technology learning, etc. It can also be my another Moment.  
 * **langueges**: both written in English and 中文 are possible, just to improve my English writting skills.  
-* **copyright**: for technical posts, maybe there will be a license later on.
+* **comments**: send me an Email.
 
 
 
