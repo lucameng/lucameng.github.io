@@ -31,6 +31,8 @@ image:
     - [用python中的imghdr模块进行损坏图像识别](#用python中的imghdr模块进行损坏图像识别)
     - [用python中的subprocess模块进行损坏图像识别](#用python中的subprocess模块进行损坏图像识别)
 
+___
+
 > 注：目录是手写的。。
 
 > 大部分转载于[Image classification from scratch](https://keras.io/examples/vision/image_classification_from_scratch/)  
