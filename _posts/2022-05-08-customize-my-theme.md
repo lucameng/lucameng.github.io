@@ -15,6 +15,8 @@ Last night I was tossing and turning, thinking of some fabulous ideas about how 
 
 ## minimalisation[^1]
 
+My goal is to minimalize my blog.
+
 At first you can see all the content of all posts just at the **Home page**, even with a picture featuring, which is exacly they are proud of. But to me it just like **chaos** though. I decided to hide the content and pictures at the Home page. As you can see now, there're only titles and description at the Home page, which looks a whole lot better to me. When I saw the effect I know that's exacly what I want. And that's probably the first step that I started to customize my own theme.
 
 By the way, does this design makes you feel more clear and comfortable when you come to ASTROWORLD the first time? Cuz people tends to feel confused when something out of order suddenly pop to there eyes.
@@ -35,9 +37,11 @@ Now, as you can see, the top post of my home page is [Guide/向导](https://luca
 
 ## code highlight block
 
-The original code highlight block is great. But when I saw something better, 你会发现它瞬间不香了. At first the block was rectangle with sharp corner angle, which might be uncomfortable to some people(include me). After I turn the `border-radius` from 0 to `.75em`, the block has fillet[^2] now.
+The original code highlight block is great. But when I saw something better, 你会发现它瞬间不香了. At first the block was rectangle with sharp corner, which might be uncomfortable to some people(include me). After I turn the `border-radius` from 0 to `.75em`, the block has fillet[^2] now.
 
 Also I change the back ground color. It was totally **black** before, I turn it to be a **lighter dark** that is a similar to the default code block color of [CSDN](https://www.csdn.net/). The contrast between code block and plain block is lessened, which is visually better.
+
+The code higtlight seems to be not friendly to `bash` grammer. I'm going to figure out a good way to fix it.
 
 ## social share
 
@@ -50,5 +54,5 @@ I'm gonna expand the social share interface, probably add Weibo and Wechat. It w
 
 ___
 
-[^1] minimalisation: 极简
-[^2] fillet: 圆角
+[^1]: minimalisation: 极简
+[^2]: fillet: 圆角
