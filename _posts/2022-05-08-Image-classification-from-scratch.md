@@ -7,14 +7,17 @@ image:
   path: /images/abstract-5.jpg
   feature: abstract-5.jpg
 ---
+[TOC]
 
-> 大部分转载于[Image classification from scratch](https://keras.io/examples/vision/image_classification_from_scratch/)
-**Author**: fchollet
-**Date created**: 2020/04/27
-**Last modified**: 2020/04/28
+> 大部分转载于[Image classification from scratch](https://keras.io/examples/vision/image_classification_from_scratch/)  
+
+**Author**: fchollet  
+**Date created**: 2020/04/27  
+**Last modified**: 2020/04/28  
 **Description**: Training an image classifier from scratch on the Kaggle Cats vs Dogs dataset.
 
-- 后半部分为我的内容
+- 后半部分为我的内容，如果你感觉难以跟上前半段英文教程，你也可以直接调到**我的实现**部分并copy代码，但我并不建议这么做。
+
 ___
 
 
@@ -315,6 +318,9 @@ model.fit(
     train_ds, epochs=epochs, callbacks=callbacks, validation_data=val_ds,
 )
 ```
+
+results:
+
 ```bash
 Epoch 1/50
 586/586 [==============================] - 81s 139ms/step - loss: 0.6233 - accuracy: 0.6700 - val_loss: 0.7698 - val_accuracy: 0.6117
@@ -400,7 +406,11 @@ This image is 84.34 percent cat and 15.66 percent dog.
 ```
 ___
 
-以下是训练模型的全部代码。
+# 我的实现
+
+## 代码
+
+以下是**训练模型**的全部代码。
 
 测试环境：nvidia geforce gtx 1650, Ubuntu 20.04, tensorflow-gpu 2.8.0.
 
@@ -537,7 +547,7 @@ ___
 
 先放老师的方法：
 
-- 用python中的Pillow模块进行损坏图像识别
+### 用python中的Pillow模块进行损坏图像识别
 
     ```python
     import os
@@ -563,7 +573,7 @@ ___
 
     共删除了4张图片。
 
-- 用 imghdr 模块进行损坏图像识别
+### 用 imghdr 模块进行损坏图像识别
 
     运用 imghdr 模块中的 what() 函数对图片字节数进行读取，若返回空字节 NULL，则判断为损坏图片并删除。
 
@@ -593,38 +603,44 @@ ___
 
     在前述两种方法的基础上，又多删了18张损坏图片。
 
-- 用 subprocess 模块进行损坏图像识别
+### 用 subprocess 模块进行损坏图像识别
 
     运用 subprocess 模块的 Popen() 方法，启动新进程打开图片，创建一个新的管道，并返回执行子进程的状态，若返回状态非零则表示异常，并以出现异常为标准删除损坏图片
 
-```python
-import os
-from subprocess import Popen, PIPE
+    ```python
+    import os
+    from subprocess import Popen, PIPE
 
-folderToCheck = 'PetImages'
-fileExtension = '.jpg'
+    folderToCheck = 'PetImages'
+    fileExtension = '.jpg'
 
-def checkImage(fn):
-  proc = Popen(['identify', '-verbose', fn], stdout=PIPE, stderr=PIPE)
-  out, err = proc.communicate()
-  exitcode = proc.returncode
-  return exitcode, out, err
+    def checkImage(fn):
+    proc = Popen(['identify', '-verbose', fn], stdout=PIPE, stderr=PIPE)
+    out, err = proc.communicate()
+    exitcode = proc.returncode
+    return exitcode, out, err
 
-i = 0
-for directory, subdirectories, files, in os.walk(folderToCheck):
-  for file in files:
-    if file.endswith(fileExtension):
-      filePath = os.path.join(directory, file)
-      code, output, error = checkImage(filePath)
-      if str(code) !="0" or str(error, "utf-8") != "":
-        i += 1
-        os.remove(filePath)
-        
-print("Deleted %d images" %i)
-```
+    i = 0
+    for directory, subdirectories, files, in os.walk(folderToCheck):
+    for file in files:
+        if file.endswith(fileExtension):
+        filePath = os.path.join(directory, file)
+        code, output, error = checkImage(filePath)
+        if str(code) !="0" or str(error, "utf-8") != "":
+            i += 1
+            os.remove(filePath)
+            
+    print("Deleted %d images" %i)
+    ```
 
     在前述三种方法的基础上，又多删了13张照片。
+
+    但我**并不建议**你使用这种方法，因为它会**eats**你的CPU cycles并会占用你**几乎所有**内存。如果你对`subprocess`感兴趣，可以看[这里](https://www.runoob.com/w3cnote/python3-subprocess.html)（谁看到这不感叹一句：What a thoughtful[^1] blogger）。
 
 你不禁发出疑问，为什么**要删除这么多损坏照片？**。原因之一就是减少训练模型时的报错，至于其他原因，Hell knows.
 
 **如果你有任何疑问，与我联系**。
+
+___
+
+[^1] thoughtful: 贴心的
