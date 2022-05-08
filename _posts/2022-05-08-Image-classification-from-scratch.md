@@ -656,7 +656,7 @@ ___
 
     在前述三种方法的基础上，又多删了13张照片。
 
-    但我**并不建议**你使用这种方法，因为它会**eats**你的CPU cycles并会占用你**几乎所有**内存。如果你对`subprocess`感兴趣，可以看[这里](https://www.runoob.com/w3cnote/python3-subprocess.html)（谁看到这不感叹一句：What a thoughtful[^1] blogger）。
+我**并不建议**你使用这种方法，因为它会**eats**你的CPU cycles并会占用你**几乎所有**内存。如果你对`subprocess`感兴趣，可以看[这里](https://www.runoob.com/w3cnote/python3-subprocess.html)（谁看到这不感叹一句：What a thoughtful[^1] blogger）。
 
 你不禁发出疑问，为什么**要删除这么多损坏照片？**。原因之一就是减少训练模型时的报错，至于其他原因，Hell knows.
 
@@ -664,4 +664,4 @@ ___
 
 ___
 
-[^1] thoughtful: 贴心的
+[^1]: thoughtful: 贴心的
