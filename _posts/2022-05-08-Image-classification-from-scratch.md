@@ -442,7 +442,6 @@ ___
 
 ```python
 import tensorflow as tf
-#from tensorflow import keras
 from tensorflow import keras 
 from tensorflow.keras import layers
 import os
@@ -490,10 +489,6 @@ data_augmentation = keras.Sequential(
         layers.RandomRotation(0.1), # 图像旋转
     ]
 )
-
-#################Configure the dataset for performance#################
-# train_ds = train_ds.prefetch(buffer_size = 32)
-# val_ds = val_ds.prefetch(buffer_size = 32)
 
 #################Build a model########################
 def make_model(input_shape, num_classes):
