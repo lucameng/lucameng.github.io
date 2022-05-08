@@ -15,11 +15,11 @@ Last night I was tossing and turning, thinking of some fabulous ideas about how 
 
 ## Minimalisation[^1]
 
-My goal is to minimalize my blog.
+My goal is to **minimalize** my blog.
 
-At first you can see all the content of all posts just at the **Home page**, even with a picture featuring, which is exacly they are proud of. But to me it just like **chaos** though. I decided to hide the content and pictures at the Home page. As you can see now, there're only titles and description at the Home page, which looks a whole lot better to me. When I saw the effect I know that's exacly what I want. And that's probably the first step that I started to customize my own theme.
+At first you can see all the content of all posts just at the **Home page**, even with a picture featuring, whice are exacly what they're proud of. But to me it just like **chaos** though. I decided to hide the content and pictures at the Home page. As you can see now, there're only titles and description at the Home page, which looks a whole lot better to me. When I saw the effect I know that was exacly what I wanted. And that's probably the first step that I started to customize my own theme.
 
-By the way, does this design makes you feel more clear and comfortable when you come to ASTROWORLD the first time? Cuz people tends to feel confused when something out of order suddenly pop to there eyes.
+By the way, does this design make you feel more clear and comfortable when you come to ASTROWORLD the first time? Cuz people tends to feel confused when something out of order suddenly pop to there eyes.
 
 ## Size Change
 
