@@ -7,7 +7,15 @@ image:
   path: /images/abstract-5.jpg
   feature: abstract-5.jpg
 ---
-[TOC]
+
+- [Introduction](#introduction)
+- [Setup](#setup)
+  - [step 0: get LiDAR ROS Package](#step-0-get-lidar-ros-package)
+  - [step 1: system setup](#step-0-get-lidar-ros-package)
+  - [step 2: build](#step-2-build)
+  - [step 3: run](#step-3-run)
+  - [step 4: test](#step-4-test)
+  - [step 5: gmapping](#step-5-gmapping)
 
 > 大部分转载于[Image classification from scratch](https://keras.io/examples/vision/image_classification_from_scratch/)  
 
