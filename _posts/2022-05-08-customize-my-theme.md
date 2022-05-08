@@ -13,7 +13,7 @@ image:
 
 Last night I was tossing and turning, thinking of some fabulous ideas about how I customized this theme. And I'm gonna do a quick write-down in case my ideas are all gone. Click [here](https://mmistakes.github.io/jekyll-theme-hpstr/) to take a look at the original look of this theme. Let's get it started.
 
-## minimalisation[^1]
+## Minimalisation[^1]
 
 My goal is to minimalize my blog.
 
@@ -21,13 +21,13 @@ At first you can see all the content of all posts just at the **Home page**, eve
 
 By the way, does this design makes you feel more clear and comfortable when you come to ASTROWORLD the first time? Cuz people tends to feel confused when something out of order suddenly pop to there eyes.
 
-## size change
+## Size Change
 
 I change the size of **main content** from 800px to 1000px, otherwise it'll seems sort of wired that your content only takes less than a half when the width of whole page is 2000px.
 
 Also to be apply to that, I change the `font size` of every word from 12px to 16px. It seems to be more friendly for myopic friend(x.
 
-## sticky on top
+## Sticky On Top
 
 I wanted to stick one of my posts on top of the home page. But it did't seem to be easy for me to implement due to lack of understanding of Jekyll grammer.
 
@@ -35,7 +35,7 @@ With the help of my kind roomate [Will](https://willyangywt.cc), The design was 
 
 Now, as you can see, the top post of my home page is [Guide/向导](https://lucameng.github.io/Guide/), which aims to give people some tips when they first come to ASTROWORLD.
 
-## code highlight block
+## Code Highlight Block
 
 The original code highlight block is great. But when I saw something better, 你会发现它瞬间不香了. At first the block was rectangle with sharp corner, which might be uncomfortable to some people(include me). After I turn the `border-radius` from 0 to `.75em`, the block has fillet[^2] now.
 
@@ -43,7 +43,7 @@ Also I change the back ground color. It was totally **black** before, I turn it 
 
 The code higtlight seems to be not friendly to `bash` grammer. I'm going to figure out a good way to fix it.
 
-## social share
+## Social Share
 
 I'm gonna expand the social share interface, probably add Weibo and Wechat. It will be implemented a few days later(after the deadlines of so many projects).
 

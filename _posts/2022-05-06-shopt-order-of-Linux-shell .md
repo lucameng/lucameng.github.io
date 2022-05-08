@@ -23,7 +23,7 @@ If you're currently using Bash, then it will prompt:
 ```bash
 /bin/bash
 ```
-## shopt command
+## shopt Command
 
 `shopt` command is used to set parameters of Linux Shell. Enter `shopt` directly to see all the parameters and their respective status on and off.
 
@@ -39,7 +39,7 @@ globstar off
 
 Which shows `globstar` is off.
 
-### options
+### Options
 
 1. `-s`  
 `-s` is used to turn on a parameter.
@@ -57,7 +57,7 @@ $ ls **/*.bin
 ```
 Then all the file with the `.bin` suffix prompt to your terminal, no matter the file is in the current directory or not. You are not allow to do so if you don't turn on the `globstar` param.
 
-Reminded that Linux is case[^1] sensitive, Turn on `nocaseglob` parameter so that it does't match case when searching for files. 
+Reminded that Linux is case[^2] sensitive, Turn on `nocaseglob` parameter so that it does't match case when searching for files. 
 
 ```bash
 $ shopt -s nocaseglob
@@ -74,4 +74,5 @@ If you'd like to share any other useful command, please let me know.
 
 ___
 
-[^1]: 大小写
+[^1]: shopt: probably short for 'shell option'
+[^2]: 大小写
