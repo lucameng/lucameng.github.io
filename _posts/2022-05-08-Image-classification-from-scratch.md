@@ -10,12 +10,26 @@ image:
 
 - [Introduction](#introduction)
 - [Setup](#setup)
-  - [step 0: get LiDAR ROS Package](#step-0-get-lidar-ros-package)
-  - [step 1: system setup](#step-0-get-lidar-ros-package)
-  - [step 2: build](#step-2-build)
-  - [step 3: run](#step-3-run)
-  - [step 4: test](#step-4-test)
-  - [step 5: gmapping](#step-5-gmapping)
+  - [Load the data: the Cats vs Dogs dataset](#load-the-data-the-cats-vs-dogs-dataset)
+    - [Raw data download](#raw-data-download)
+    - [Filter out corrupted images](#filter-out-corrupted-images)
+  - [Generate a Dataset](#generate-a-dataset)
+  - [Visualize the data](#visualize-the-data)
+  - [Using image data augmentation](#using-image-data-augmentation)
+  - [Standardizing the data](#standardizing-the-data)
+  - [Two options to preprocess the data](#two-options-to-preprocess-the-data)
+  - [Configure the dataset for performance](#configure-the-dataset-for-performance)
+  - [Build a model](#build-a-model)
+  - [Train the model](#train-the-model)
+  - [Run inference on new data](#run-inference-on-new-data)
+- [我的实现](#我的实现)
+  - [代码](#代码)
+  - [关于检测并删除损坏图片](#关于检测并删除损坏图片)
+    - [用python中的Pillow模块进行损坏图像识别](#用python中的pillow模块进行损坏图像识别)
+    - [用python中的imghdr模块进行损坏图像识别](#用python中的imghdr模块进行损坏图像识别)
+    - [用python中的subprocess模块进行损坏图像识别](#用python中的subprocess模块进行损坏图像识别)
+
+> 注：目录是手写的。。
 
 > 大部分转载于[Image classification from scratch](https://keras.io/examples/vision/image_classification_from_scratch/)  
 
@@ -581,7 +595,7 @@ ___
 
     共删除了4张图片。
 
-### 用 imghdr 模块进行损坏图像识别
+### 用python中的imghdr模块进行损坏图像识别
 
     运用 imghdr 模块中的 what() 函数对图片字节数进行读取，若返回空字节 NULL，则判断为损坏图片并删除。
 
@@ -611,7 +625,7 @@ ___
 
     在前述两种方法的基础上，又多删了18张损坏图片。
 
-### 用 subprocess 模块进行损坏图像识别
+### 用python中的subprocess模块进行损坏图像识别
 
     运用 subprocess 模块的 Popen() 方法，启动新进程打开图片，创建一个新的管道，并返回执行子进程的状态，若返回状态非零则表示异常，并以出现异常为标准删除损坏图片
 
