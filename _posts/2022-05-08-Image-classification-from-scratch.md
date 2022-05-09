@@ -33,16 +33,15 @@ image:
 
 ___
 
-> 注：目录是手写的。。
-
-> 大部分转载于[Image classification from scratch](https://keras.io/examples/vision/image_classification_from_scratch/)  
+> 注：目录是手写的。。  
+> 注：后半部分为我的内容，如果你感觉难以跟上前半段英文教程，你也可以直接跳到**[我的实现](#关于检测并删除损坏图片)**部分并copy代码，但我并不建议这么做。  
+> 本文前半部分转载于[Image classification from scratch](https://keras.io/examples/vision/image_classification_from_scratch/)  
 
 **Author**: fchollet  
 **Date created**: 2020/04/27  
 **Last modified**: 2020/04/28  
 **Description**: Training an image classifier from scratch on the Kaggle Cats vs Dogs dataset.
 
-- 后半部分为我的内容，如果你感觉难以跟上前半段英文教程，你也可以直接调到**我的实现**部分并copy代码，但我并不建议这么做。
 
 ___
 
@@ -570,91 +569,90 @@ ___
 
 ### 用python中的Pillow模块进行损坏图像识别
 
-    ```python
-    import os
-    from PIL import Image
+```python
+import os
+from PIL import Image
 
-    num_skipped = 0
-    for folder_name in ('Cat', 'Dog'):
-        folder_path = os.path.join('PetImages', folder_name)
-        for fname in os.listdir(folder_path):
-            fpath = os.path.join(folder_path, fname)
-            try:
-                img = Image.open(fpath)
-                img.verify()
-            except(IOError, SyntaxError):
-                num_skipped += 1
-                # Delete corruptep image
-                os.remove(fpath)
-            finally:
-                img.close()
+num_skipped = 0
+for folder_name in ('Cat', 'Dog'):
+    folder_path = os.path.join('PetImages', folder_name)
+    for fname in os.listdir(folder_path):
+        fpath = os.path.join(folder_path, fname)
+        try:
+            img = Image.open(fpath)
+            img.verify()
+        except(IOError, SyntaxError):
+            num_skipped += 1
+            # Delete corruptep image
+            os.remove(fpath)
+        finally:
+            img.close()
 
-    print('Deleted %d images' % num_skipped)
-    ```
+print('Deleted %d images' % num_skipped)
+```
 
-    共删除了4张图片。
+共删除了4张图片。
 
 ### 用python中的imghdr模块进行损坏图像识别
 
-    运用 imghdr 模块中的 what() 函数对图片字节数进行读取，若返回空字节 NULL，则判断为损坏图片并删除。
+运用 imghdr 模块中的 what() 函数对图片字节数进行读取，若返回空字节 NULL，则判断为损坏图片并删除。
 
-    ```python
-    import imghdr
-    import os
-
-
-    def delect_webp_and_none_type(path):
-        i = 0
-        for root, dir, file in os.walk(path):
-
-            for name in file:
-                target = (os.path.join(root,name))
-                result_type = imghdr.what(target)
-
-                if result_type == None:
-                    # print(target)
-                    i += 1
-                    os.remove(target)
-        print("Deleted %d images" %i)
+```python
+import imghdr
+import os
 
 
-    if __name__ =='__main__':
-        delect_webp_and_none_type("PetImages")
-    ```
+def delect_webp_and_none_type(path):
+    i = 0
+    for root, dir, file in os.walk(path):
 
-    在前述两种方法的基础上，又多删了18张损坏图片。
+        for name in file:
+            target = (os.path.join(root,name))
+            result_type = imghdr.what(target)
+
+            if result_type == None:
+                # print(target)
+                i += 1
+                os.remove(target)
+    print("Deleted %d images" %i)
+
+
+if __name__ =='__main__':
+    delect_webp_and_none_type("PetImages")
+```
+
+在前述两种方法的基础上，又多删了18张损坏图片。
 
 ### 用python中的subprocess模块进行损坏图像识别
 
-    运用 subprocess 模块的 Popen() 方法，启动新进程打开图片，创建一个新的管道，并返回执行子进程的状态，若返回状态非零则表示异常，并以出现异常为标准删除损坏图片
+运用 subprocess 模块的 Popen() 方法，启动新进程打开图片，创建一个新的管道，并返回执行子进程的状态，若返回状态非零则表示异常，并以出现异常为标准删除损坏图片
 
-    ```python
-    import os
-    from subprocess import Popen, PIPE
+```python
+import os
+from subprocess import Popen, PIPE
 
-    folderToCheck = 'PetImages'
-    fileExtension = '.jpg'
+folderToCheck = 'PetImages'
+fileExtension = '.jpg'
 
-    def checkImage(fn):
+def checkImage(fn):
     proc = Popen(['identify', '-verbose', fn], stdout=PIPE, stderr=PIPE)
     out, err = proc.communicate()
     exitcode = proc.returncode
     return exitcode, out, err
 
-    i = 0
-    for directory, subdirectories, files, in os.walk(folderToCheck):
-    for file in files:
-        if file.endswith(fileExtension):
-        filePath = os.path.join(directory, file)
-        code, output, error = checkImage(filePath)
-        if str(code) !="0" or str(error, "utf-8") != "":
-            i += 1
-            os.remove(filePath)
-            
-    print("Deleted %d images" %i)
-    ```
-
-    在前述三种方法的基础上，又多删了13张照片。
+i = 0
+for directory, subdirectories, files, in os.walk(folderToCheck):
+for file in files:
+    if file.endswith(fileExtension):
+    filePath = os.path.join(directory, file)
+    code, output, error = checkImage(filePath)
+    if str(code) !="0" or str(error, "utf-8") != "":
+        i += 1
+        os.remove(filePath)
+        
+print("Deleted %d images" %i)
+```
+在前述三种方法的基础上，又多删了13张照片。
 
 我**并不建议**你使用这种方法，因为它会**eats**你的CPU cycles并会占用你**几乎所有**内存。如果你对`subprocess`感兴趣，可以看[这里](https://www.runoob.com/w3cnote/python3-subprocess.html)（谁看到这不感叹一句：What a thoughtful[^1] blogger）。
 
