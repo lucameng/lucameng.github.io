@@ -571,7 +571,7 @@ Epoch 50/50
 
 <figure>
 	<center>
-         <a href="/images/ufc274_8.jpg"><img src="/images/X_traindata.png" alt=""></a>
+         <a href="/images/X_traindata.png"><img src="/images/X_traindata.png" alt=""></a>
 	</center>
 </figure>
 
