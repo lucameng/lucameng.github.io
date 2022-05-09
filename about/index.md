@@ -37,7 +37,7 @@ Do an ad-lib anytime you want! For me it'll be like "ASTRO!!!".
 
 <div markdown="0"><a href="mailto:{{luca.meng@outlook.com}}"><i class="fa fa-fw fa-envelope"></i> Email</a></div>
 
- Still confused? See [Guide in ASTROWORLD](https://lucameng.github.io/post-test/)
+ Still confused? See [Guide in ASTROWORLD](https://lucameng.github.io/Guide/)
 
 <br/>
 <br/>

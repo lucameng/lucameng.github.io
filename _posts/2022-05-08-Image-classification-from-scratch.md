@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Image classification from scratch
-description: "从零开始深度学习"
+description: "从零开始深度学习——图像分类"
 tags: [Machine Learning, Deep Learning]
 image:
   path: /images/abstract-5.jpg
@@ -34,7 +34,8 @@ image:
 ___
 
 > 注：目录是手写的。。  
-> 注：后半部分为我的内容，如果你感觉难以跟上前半段英文教程，你也可以直接跳到**[我的实现](#关于检测并删除损坏图片)**部分并copy代码，但我并不建议这么做。  
+> 注：后半部分为我的内容，如果你感觉难以跟上前半段英文教程，你也可以直接跳到**[我的实现](#我的实现)**部分并copy代码，但我并不建议这么做。  
+> 注：在真正开始之前，你可能需要把tensorflow安装好。然而相比于安装pytorch，tensorflow的安装实在是个大工程。
 > 本文前半部分转载于[Image classification from scratch](https://keras.io/examples/vision/image_classification_from_scratch/)  
 
 **Author**: fchollet  
@@ -72,14 +73,10 @@ $ curl -O https://download.microsoft.com/download/3/E/1/3E1C3F21-ECDB-4869-8368-
 
 ```bash
 $ unzip -q kagglecatsanddogs_3367a.zip
-$ ls
 ```
 
 Now we have a PetImages folder which contain two subfolders, Cat and Dog. Each subfolder contains image files for each category.
 
-```bash
-$ unzip -q kagglecatsanddogs_3367a.zip
-```
 ```bash
 $ ls
 Cat/  Dog/
@@ -437,7 +434,8 @@ ___
 
 以下是**训练模型**的全部代码。
 
-测试环境：nvidia geforce gtx 1650, Ubuntu 20.04, tensorflow-gpu 2.8.0.
+测试环境：nvidia geforce gtx 1650, Ubuntu 20.04, tensorflow-gpu 2.8.0. 
+一个epoch耗时约252s。
 
 ```python
 import tensorflow as tf
@@ -455,7 +453,7 @@ batch_size = 32
 # 生成训练数据 
 
 train_ds = keras.preprocessing.image_dataset_from_directory(
-    "/home/astrc/CODE/codePython/DL/PetImages",
+    "PetImages",    # 相对路径
     validation_split = 0.2,
     subset = "training",
     seed = 1337,
@@ -464,7 +462,7 @@ train_ds = keras.preprocessing.image_dataset_from_directory(
 )
 
 val_ds = keras.preprocessing.image_dataset_from_directory(
-    "/home/astrc/CODE/codePython/DL/PetImages",
+    "PetImages",    # 相对路径
     validation_split = 0.2,
     subset = "validation",
     seed = 1337,
