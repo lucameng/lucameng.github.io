@@ -409,7 +409,8 @@ ___
 
 以下是**训练模型**的全部代码。
 
-测试环境：nvidia geforce gtx 1650, Ubuntu 20.04, tensorflow-gpu 2.8.0. 
+测试环境：Nvidia GeForce gtx 1650, Ubuntu 20.04.  
+Nvidia-Driver-510, CUDA-11.6, cuDNN-7.6.5, tensorflow-gpu 2.8.0.  
 一个epoch耗时约252s。
 
 ```python
