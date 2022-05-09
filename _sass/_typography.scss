@@ -36,7 +36,8 @@ a {
 	color: $link-color; 
 
 	&:visited { 
-		color: lighten($link-color, 20); 
+		//color: lighten($link-color, 20); 
+		color: rgba(59, 20, 199, 0.644)
 	}
 
 	&:hover { 

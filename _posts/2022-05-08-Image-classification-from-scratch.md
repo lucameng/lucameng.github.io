@@ -419,7 +419,6 @@ from tensorflow import keras
 from tensorflow.keras import layers
 import os
 
-
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # 不显示等级2以下的信息
 
 ################Generate a Dataset###############
@@ -619,7 +618,6 @@ print('Deleted %d images' % num_skipped)
 ```python
 import imghdr
 import os
-
 
 def delect_webp_and_none_type(path):
     i = 0
