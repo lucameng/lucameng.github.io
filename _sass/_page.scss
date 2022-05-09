@@ -17,7 +17,7 @@ body {
 .hentry {
 	@include clearfix;
 
-	h1, h2, h3, h4, h5, h6, p, li {
+	h1, h2, h3, h4, h5, h6, h7, p, li {
 		word-wrap: break-word;
 	}
 }
@@ -83,6 +83,21 @@ body {
 
 		@media #{$medium} {
 			@include font-rem(24);
+		}
+	}
+
+	p {
+		color: lighten($base-color,20);
+	}
+
+	h7 {
+		margin: 0;
+		@include font-rem(24);
+		text-transform: uppercase;
+		color: lighten($base-color,40);
+
+		@media #{$medium} {
+			@include font-rem(28);
 		}
 	}
 

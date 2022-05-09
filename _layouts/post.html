@@ -32,9 +32,9 @@
         {% endif %}
 
         {% if page.description %}
-        <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+        <h7>{{ page.date | date: "%B %d, %Y" }}</h7>
           {{ page.description }}
-        </span></h2>
+        </div>
         {% endif %}
         
         <h2><span class="entry-date date published"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></span></h2>
