@@ -446,7 +446,7 @@ import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # 不显示等级2以下的信息
 
 ################Generate a Dataset###############
-image_size = (10, 10)
+image_size = (180, 180)
 batch_size = 32
 
 # 生成训练数据 
@@ -556,6 +556,109 @@ model.fit(
     train_ds, epochs=epochs, callbacks=callbacks, validation_data=val_ds,
 )
 ```
+
+下面训练成果（有点长）：
+
+```bash
+Epoch 1/50
+585/585 [==============================] - 258s 430ms/step - loss: 0.6059 - accuracy: 0.6789 - val_loss: 1.2052 - val_accuracy: 0.5189
+Epoch 2/50
+585/585 [==============================] - 253s 432ms/step - loss: 0.4571 - accuracy: 0.7830 - val_loss: 0.7494 - val_accuracy: 0.6975
+Epoch 3/50
+585/585 [==============================] - 253s 432ms/step - loss: 0.3718 - accuracy: 0.8328 - val_loss: 0.3944 - val_accuracy: 0.8124
+Epoch 4/50
+585/585 [==============================] - 252s 431ms/step - loss: 0.3130 - accuracy: 0.8660 - val_loss: 0.3039 - val_accuracy: 0.8665
+Epoch 5/50
+585/585 [==============================] - 252s 431ms/step - loss: 0.2649 - accuracy: 0.8868 - val_loss: 0.2050 - val_accuracy: 0.9170
+Epoch 6/50
+585/585 [==============================] - 252s 431ms/step - loss: 0.2243 - accuracy: 0.9076 - val_loss: 0.3592 - val_accuracy: 0.8338
+Epoch 7/50
+585/585 [==============================] - 252s 431ms/step - loss: 0.2004 - accuracy: 0.9175 - val_loss: 0.2201 - val_accuracy: 0.9097
+Epoch 8/50
+585/585 [==============================] - 252s 431ms/step - loss: 0.1877 - accuracy: 0.9215 - val_loss: 1.0135 - val_accuracy: 0.6670
+Epoch 9/50
+585/585 [==============================] - 253s 432ms/step - loss: 0.1723 - accuracy: 0.9268 - val_loss: 0.3467 - val_accuracy: 0.8676
+Epoch 10/50
+585/585 [==============================] - 253s 432ms/step - loss: 0.1616 - accuracy: 0.9328 - val_loss: 0.2130 - val_accuracy: 0.9198
+Epoch 11/50
+585/585 [==============================] - 253s 432ms/step - loss: 0.1532 - accuracy: 0.9368 - val_loss: 0.1484 - val_accuracy: 0.9386
+Epoch 12/50
+585/585 [==============================] - 252s 431ms/step - loss: 0.1432 - accuracy: 0.9416 - val_loss: 0.5798 - val_accuracy: 0.8064
+Epoch 13/50
+585/585 [==============================] - 252s 431ms/step - loss: 0.1401 - accuracy: 0.9426 - val_loss: 0.1809 - val_accuracy: 0.9266
+Epoch 14/50
+585/585 [==============================] - 252s 431ms/step - loss: 0.1340 - accuracy: 0.9467 - val_loss: 0.1635 - val_accuracy: 0.9320
+Epoch 15/50
+585/585 [==============================] - 253s 432ms/step - loss: 0.1246 - accuracy: 0.9491 - val_loss: 0.1300 - val_accuracy: 0.9452
+Epoch 16/50
+585/585 [==============================] - 253s 432ms/step - loss: 0.1239 - accuracy: 0.9502 - val_loss: 0.2079 - val_accuracy: 0.9202
+Epoch 17/50
+585/585 [==============================] - 253s 432ms/step - loss: 0.1198 - accuracy: 0.9505 - val_loss: 0.2073 - val_accuracy: 0.9168
+Epoch 18/50
+585/585 [==============================] - 252s 431ms/step - loss: 0.1150 - accuracy: 0.9550 - val_loss: 0.1304 - val_accuracy: 0.9510
+Epoch 19/50
+585/585 [==============================] - 253s 432ms/step - loss: 0.1063 - accuracy: 0.9582 - val_loss: 0.2033 - val_accuracy: 0.9247
+Epoch 20/50
+585/585 [==============================] - 253s 432ms/step - loss: 0.1054 - accuracy: 0.9572 - val_loss: 0.1490 - val_accuracy: 0.9489
+Epoch 21/50
+585/585 [==============================] - 253s 432ms/step - loss: 0.1041 - accuracy: 0.9594 - val_loss: 0.1404 - val_accuracy: 0.9414
+Epoch 22/50
+585/585 [==============================] - 252s 431ms/step - loss: 0.0988 - accuracy: 0.9604 - val_loss: 0.1610 - val_accuracy: 0.9463
+Epoch 23/50
+585/585 [==============================] - 252s 431ms/step - loss: 0.0951 - accuracy: 0.9627 - val_loss: 0.1247 - val_accuracy: 0.9512
+Epoch 24/50
+585/585 [==============================] - 253s 433ms/step - loss: 0.0965 - accuracy: 0.9609 - val_loss: 0.1502 - val_accuracy: 0.9386
+Epoch 25/50
+585/585 [==============================] - 252s 431ms/step - loss: 0.0896 - accuracy: 0.9643 - val_loss: 0.1505 - val_accuracy: 0.9467
+Epoch 26/50
+585/585 [==============================] - 252s 430ms/step - loss: 0.0896 - accuracy: 0.9623 - val_loss: 0.1063 - val_accuracy: 0.9611
+Epoch 27/50
+585/585 [==============================] - 252s 430ms/step - loss: 0.0837 - accuracy: 0.9663 - val_loss: 0.1215 - val_accuracy: 0.9502
+Epoch 28/50
+585/585 [==============================] - 252s 431ms/step - loss: 0.0840 - accuracy: 0.9664 - val_loss: 0.1023 - val_accuracy: 0.9602
+Epoch 29/50
+585/585 [==============================] - 252s 431ms/step - loss: 0.0819 - accuracy: 0.9666 - val_loss: 0.1164 - val_accuracy: 0.9585
+Epoch 30/50
+585/585 [==============================] - 252s 430ms/step - loss: 0.0804 - accuracy: 0.9677 - val_loss: 0.0912 - val_accuracy: 0.9662
+Epoch 31/50
+585/585 [==============================] - 252s 431ms/step - loss: 0.0793 - accuracy: 0.9691 - val_loss: 0.0999 - val_accuracy: 0.9585
+Epoch 32/50
+585/585 [==============================] - 252s 430ms/step - loss: 0.0785 - accuracy: 0.9697 - val_loss: 0.1156 - val_accuracy: 0.9587
+Epoch 33/50
+585/585 [==============================] - 252s 431ms/step - loss: 0.0788 - accuracy: 0.9710 - val_loss: 0.0892 - val_accuracy: 0.9664
+Epoch 34/50
+585/585 [==============================] - 252s 430ms/step - loss: 0.0711 - accuracy: 0.9719 - val_loss: 0.1038 - val_accuracy: 0.9624
+Epoch 35/50
+585/585 [==============================] - 252s 430ms/step - loss: 0.0707 - accuracy: 0.9739 - val_loss: 0.1357 - val_accuracy: 0.9493
+Epoch 36/50
+585/585 [==============================] - 252s 431ms/step - loss: 0.0713 - accuracy: 0.9719 - val_loss: 0.1404 - val_accuracy: 0.9478
+Epoch 37/50
+585/585 [==============================] - 252s 431ms/step - loss: 0.0659 - accuracy: 0.9734 - val_loss: 0.1286 - val_accuracy: 0.9596
+Epoch 38/50
+585/585 [==============================] - 252s 431ms/step - loss: 0.0646 - accuracy: 0.9741 - val_loss: 0.2148 - val_accuracy: 0.9249
+Epoch 39/50
+585/585 [==============================] - 252s 430ms/step - loss: 0.0661 - accuracy: 0.9745 - val_loss: 0.1324 - val_accuracy: 0.9452
+Epoch 40/50
+585/585 [==============================] - 253s 432ms/step - loss: 0.0684 - accuracy: 0.9733 - val_loss: 0.1414 - val_accuracy: 0.9437
+Epoch 41/50
+585/585 [==============================] - 253s 432ms/step - loss: 0.0612 - accuracy: 0.9748 - val_loss: 0.1065 - val_accuracy: 0.9598
+Epoch 42/50
+585/585 [==============================] - 252s 431ms/step - loss: 0.0615 - accuracy: 0.9766 - val_loss: 0.1328 - val_accuracy: 0.9561
+Epoch 43/50
+585/585 [==============================] - 252s 431ms/step - loss: 0.0609 - accuracy: 0.9765 - val_loss: 0.1101 - val_accuracy: 0.9587
+Epoch 44/50
+585/585 [==============================] - 252s 431ms/step - loss: 0.0624 - accuracy: 0.9763 - val_loss: 0.1298 - val_accuracy: 0.9517
+Epoch 45/50
+585/585 [==============================] - 252s 430ms/step - loss: 0.0600 - accuracy: 0.9766 - val_loss: 0.0841 - val_accuracy: 0.9735
+Epoch 46/50
+585/585 [==============================] - 252s 431ms/step - loss: 0.0580 - accuracy: 0.9771 - val_loss: 0.0743 - val_accuracy: 0.9707
+Epoch 47/50
+585/585 [==============================] - 252s 431ms/step - loss: 0.0564 - accuracy: 0.9783 - val_loss: 0.1140 - val_accuracy: 0.9611
+Epoch 48/50
+585/585 [==============================] - 252s 431ms/step - loss: 0.0544 - accuracy: 0.9783 - val_loss: 0.1142 - val_accuracy: 0.9621
+```
+
+你可能会好奇，为什么没有**照片损坏**的warning呢？接着往下看吧。
 ___
 
 ## 关于检测并删除损坏图片
@@ -622,7 +725,9 @@ if __name__ =='__main__':
 
 ### 用python中的subprocess模块进行损坏图像识别
 
-运用 subprocess 模块的 Popen() 方法，启动新进程打开图片，创建一个新的管道，并返回执行子进程的状态，若返回状态非零则表示异常，并以出现异常为标准删除损坏图片
+运用 subprocess 模块的 Popen() 方法，启动新进程打开图片，创建一个新的管道，并返回执行子进程的状态，若返回状态非零则表示异常，并以出现异常为标准删除损坏图片。
+
+我们启动新进程打开[ImageMagick](https://imagemagick.org/)的Identify图像识别，当识别到损坏图片时将其删除。
 
 ```python
 import os
@@ -652,6 +757,8 @@ print("Deleted %d images" %i)
 在前述三种方法的基础上，又多删了13张照片。
 
 我**并不建议**你使用这种方法，因为它会**eats**你的CPU cycles并会占用你**几乎所有**内存。如果你对`subprocess`感兴趣，可以看[这里](https://www.runoob.com/w3cnote/python3-subprocess.html)（谁看到这不感叹一句：What a thoughtful[^1] blogger）。
+
+**但是**，通过这种方法删除照片，**几乎能把所有损坏照片删干净**
 
 你不禁发出疑问，为什么**要删除这么多损坏照片？**。原因之一就是减少训练模型时的报错，至于其他原因，Hell knows.
 
