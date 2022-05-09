@@ -25,15 +25,14 @@ image:
   - [Train the model](#train-the-model)
   - [Run inference on new data](#run-inference-on-new-data)
 - [我的实现](#我的实现)
-  - [代码](#代码)
+  - [训练过程](#训练过程)
   - [关于检测并删除损坏图片](#关于检测并删除损坏图片)
     - [用python中的Pillow模块进行损坏图像识别](#用python中的pillow模块进行损坏图像识别)
     - [用python中的imghdr模块进行损坏图像识别](#用python中的imghdr模块进行损坏图像识别)
     - [用python中的subprocess模块进行损坏图像识别](#用python中的subprocess模块进行损坏图像识别)
 
 ___
-
-> 注：目录是手写的。。  
+ 
 > 注：后半部分为我的内容，如果你感觉难以跟上前半段英文教程，你也可以直接跳到**[我的实现](#我的实现)**部分并copy代码，但我并不建议这么做。  
 > 注：在真正开始之前，你可能需要把tensorflow安装好。然而相比于安装pytorch，tensorflow的安装实在是个大工程。  
 > 本文前半部分转载于[Image classification from scratch](https://keras.io/examples/vision/image_classification_from_scratch/)  
@@ -430,7 +429,7 @@ ___
 
 # 我的实现
 
-## 代码
+## 训练过程
 
 以下是**训练模型**的全部代码。
 
