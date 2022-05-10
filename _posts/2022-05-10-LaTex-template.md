@@ -214,7 +214,7 @@ $ a + b = c $
 %%%%%%%%%%%%%%%%%
 \lstset{
     language = Python,
-    backgroundcolor = \color{white!10},    % 背景色：淡黄
+    backgroundcolor = \color{white!10},    % 背景色：白色
     basicstyle = \small\ttfamily,           % 基本样式 + 小号字体
     rulesepcolor= \color{gray},             % 代码块边框颜色
     breaklines = true,                  % 代码过长则换行
@@ -237,7 +237,7 @@ $ a + b = c $
 <figure>
 	<p style="text-align: center;">
          <a href="/images/LaTex/codelist.png"><img src="/images/LaTex/codelist.png" alt=""></a>
-         <figcaption>我的效果</figcaption>
+         <figcaption>python code</figcaption>
 	</p>
 </figure>
 
@@ -251,39 +251,20 @@ $ a + b = c $
 \end{lstlisting}
 ```
 
-2. matlab code
+1. other code
 
-- package
+修改`\lstset`中的`languege`。
 
-```tex
-\usepackage{listings} 
-\usepackage{xcolor}
-\lstset{
-  language=matlab,                             
-  frame=shadowbox, 
-  rulesepcolor=\color{red!20!green!20!blue!20},  %代码块边框为淡青色
-  keywordstyle=\color{blue!90}\bfseries,         %代码关键字的颜色为蓝色，粗体
-  commentstyle=\color{red!10!green!70}\textit,   % 设置代码注释的颜色
-  showstringspaces=false,                        %不显示代码字符串中间的空格标记
-  numbers=left,                                  % 显示行号
-  numberstyle=\tiny,                             % 行号字体
-  stringstyle=\ttfamily,                         % 代码字符串的特殊格式
-  breaklines=true,                               % 对过长的代码自动换行
-  extendedchars=false,                           % 解决代码跨页时，章节标题，页眉等汉字不显示的问题
-% escapebegin=\begin{CJK*},escapeend=\end{CJK*},% 代码中出现中文必须加上，否则报错
-  texcl=true
-  }
-```
+例如：`languege=Matlab`
 
-- format
+<figure>
+	<p style="text-align: center;">
+         <a href="/images/LaTex/matlabcode.png"><img src="/images/LaTex/matlabcode.png" alt=""></a>
+         <figcaption>matlab code</figcaption>
+	</p>
+</figure>
 
-```tex
-\begin{lstlisting}[caption = EM算法]
-     
-    %your matlab code
-                   
-\end{lstlisting}
-```
+> 注：这里将注释颜色改为了`cyan`。
 
 ### Reference
 
