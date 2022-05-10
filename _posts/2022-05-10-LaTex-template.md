@@ -257,7 +257,6 @@ $ a + b = c $
 <figure>
 	<p style="text-align: center;">
          <a href="/images/LaTex/codelist.png"><img src="/images/LaTex/codelist.png" alt=""></a>
-         <figcaption>python code</figcaption>
 	</p>
 </figure>
 
@@ -280,7 +279,6 @@ $ a + b = c $
 <figure>
 	<p style="text-align: center;">
          <a href="/images/LaTex/matlabcode.png"><img src="/images/LaTex/matlabcode.png" alt=""></a>
-         <figcaption>matlab code</figcaption>
 	</p>
 </figure>
 
@@ -307,7 +305,6 @@ $ a + b = c $
 <figure>
 	<p style="text-align: center;">
          <a href="/images/LaTex/ref.png"><img src="/images/LaTex/ref.png" alt=""></a>
-         <figcaption>reference</figcaption>
 	</p>
 </figure>
 
