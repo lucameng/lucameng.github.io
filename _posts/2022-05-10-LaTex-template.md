@@ -199,4 +199,47 @@ $ a + b = c $
 </figure>
 
 
+### Code Listing
+
+1. Python listing
+
+- package
+
+```tex
+\usepackage{caption}
+\usepackage[dvipsnames]{xcolor}  % 更全的色系
+\usepackage{listings}  % 排代码用的宏包
+%%%%%%%%%%%%%%%%%
+%% listings设置 %%
+%%%%%%%%%%%%%%%%%
+\lstset{
+    language = Python,
+    backgroundcolor = \color{white!10},    % 背景色：淡黄
+    basicstyle = \small\ttfamily,           % 基本样式 + 小号字体
+    rulesepcolor= \color{gray},             % 代码块边框颜色
+    breaklines = true,                  % 代码过长则换行
+    numbers = left,                     % 行号在左侧显示
+    numberstyle = \small,               % 行号字体
+    keywordstyle = \color{blue},            % 关键字颜色
+    commentstyle =\color{gray!100},        % 注释颜色
+    stringstyle = \color{red!100},          % 字符串颜色
+    frame = shadowbox,                  % 用（带影子效果）方框框住代码块
+    showspaces = false,                 % 不显示空格
+    columns = fixed,                    % 字间距固定 
+    %escapeinside={<@}{@>}              % 特殊自定分隔符：<@可以自己加颜色@>
+    morekeywords = {as},                % 自加新的关键字（必须前后都是空格）
+    deletendkeywords = {compile}        % 删除内定关键字；删除错误标记的关键字用
+    }
+```
+
+你可以在`\lstset`里定制你想要的效果。
+
+<figure>
+	<p style="text-align: center;">
+         <a href="/images/LaTex/codelist.png"><img src="/images/LaTex/codelist.png" alt=""></a>
+	</p>
+</figure>
+
+
+
 ## To be continued
