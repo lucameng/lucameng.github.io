@@ -10,9 +10,23 @@ image:
 
 **TABLE/目录**
 
+- [Base Format](#base-format)
+- [Some Templates](#some-templates)
+  - [Mathematical Expression](#mathematical-expression)
+    - [format](#format)
+  - [Image Insert](#image-insert)
+    - [package](#package)
+    - [format](#format-1)
+  - [Code Listing](#code-listing)
+    - [python code](#python-code)
+    - [other code](#other-code)
+  - [Reference](#reference)
+- [Page Font](#page-font)
+  - [To be continued...](#to-be-continued)
+
 ___
 
-## Format
+## Base Format
 
 ```tex
 \documentclass[UTF8]{ctexart}
@@ -36,9 +50,11 @@ ___
 
 `\begin{document}`和`\end{document}`之间的部分就是正文（content）。
 
+___
+
 ## Some Templates 
 
-### mathematical expression
+### Mathematical Expression
 
 - package
 
@@ -114,6 +130,8 @@ $ a + b = c $
          <a href="/images/LaTex/formula1.png"><img src="/images/LaTex/formula1.png" alt=""></a>
 	</p>
 </figure>
+
+___
 
 ### Image Insert
 
@@ -218,6 +236,7 @@ $ a + b = c $
 	</p>
 </figure>
 
+___
 
 ### Code Listing
 
@@ -284,6 +303,8 @@ $ a + b = c $
 
 > 注：这里将注释颜色改为了`cyan`。
 
+___
+
 ### Reference
 
 参考文献部分包含在`content`中，不需要额外引入宏包。
@@ -308,6 +329,12 @@ $ a + b = c $
 	</p>
 </figure>
 
+___
 
+## Page Font
+
+
+
+___
 
 ### To be continued...
