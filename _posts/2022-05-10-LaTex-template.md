@@ -193,15 +193,15 @@ $ a + b = c $
 ```
 效果：
 <figure>
-	<center>
+	<p style="text-align: center;">
          <a href="/images/LaTex/imginsr3.png"><img src="/images/LaTex/imginsr3.png" alt=""></a>
-	</center>
+	</p>
 </figure>
 
 
 ### Code Listing
 
-1. Python listing
+1. python code
 
 - package
 
@@ -237,6 +237,76 @@ $ a + b = c $
 <figure>
 	<p style="text-align: center;">
          <a href="/images/LaTex/codelist.png"><img src="/images/LaTex/codelist.png" alt=""></a>
+         <figcaption>我的效果</figcaption>
+	</p>
+</figure>
+
+- format
+
+```tex
+\begin{lstlisting}[caption = EM算法]
+     
+    %your python code
+                   
+\end{lstlisting}
+```
+
+2. matlab code
+
+- package
+
+```tex
+\usepackage{listings} 
+\usepackage{xcolor}
+\lstset{
+  language=matlab,                             
+  frame=shadowbox, 
+  rulesepcolor=\color{red!20!green!20!blue!20},  %代码块边框为淡青色
+  keywordstyle=\color{blue!90}\bfseries,         %代码关键字的颜色为蓝色，粗体
+  commentstyle=\color{red!10!green!70}\textit,   % 设置代码注释的颜色
+  showstringspaces=false,                        %不显示代码字符串中间的空格标记
+  numbers=left,                                  % 显示行号
+  numberstyle=\tiny,                             % 行号字体
+  stringstyle=\ttfamily,                         % 代码字符串的特殊格式
+  breaklines=true,                               % 对过长的代码自动换行
+  extendedchars=false,                           % 解决代码跨页时，章节标题，页眉等汉字不显示的问题
+% escapebegin=\begin{CJK*},escapeend=\end{CJK*},% 代码中出现中文必须加上，否则报错
+  texcl=true
+  }
+```
+
+- format
+
+```tex
+\begin{lstlisting}[caption = EM算法]
+     
+    %your matlab code
+                   
+\end{lstlisting}
+```
+
+### Reference
+
+参考文献部分包含在`content`中，不需要额外引入宏包。
+
+- format
+
+```tex
+\newpage    %新的一页
+\begin{thebibliography}{99}
+
+    \bibitem{ref1} Krizhevsky A, Sutskever I, Hinton G E. Imagenet classification with deep convolutional neural networks[J]. Advances in neural information processing systems, 2012, 25.
+    \bibitem{ref2} He, Kaiming; Zhang, Xiangyu; Ren, Shaoqing; Sun, Jian (2016). Deep Residual Learning for Image Recognition. 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR). Las Vegas, NV, USA: IEEE. pp. 770–778
+
+\end{thebibliography}
+```
+
+效果：
+
+<figure>
+	<p style="text-align: center;">
+         <a href="/images/LaTex/ref.png"><img src="/images/LaTex/ref.png" alt=""></a>
+         <figcaption>reference</figcaption>
 	</p>
 </figure>
 
