@@ -14,7 +14,7 @@ ___
 
 ## Format
 
-```
+```tex
 \documentclass[UTF8]{ctexart}
 
 %%%%%%%%%%%
@@ -42,7 +42,7 @@ ___
 
 - package
 
-```
+```tex
 \usepackage{amsmath}                        % 最基本的包
 \usepackage{amssymb}
 \usepackage{amsfonts}
@@ -67,7 +67,7 @@ $ a + b = c $
 
 例如：
 
-```
+```tex
 \begin{normalsize}
     \begin{equation}
         a + b = c
@@ -97,7 +97,7 @@ $ a + b = c $
 
 - package
 
-```
+```tex
 \usepackage{graphicx}
 \usepackage{float}          % 图片悬浮文字上方
 \usepackage{subfig}         % 多张图片排列
@@ -108,7 +108,7 @@ $ a + b = c $
 1. 一张图片
 
 
-```
+```tex
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{./pics/dog.jpg}
