@@ -142,9 +142,10 @@ $ a + b = c $
 \end{figure}
 ```
 
+效果：
 <figure>
 	<center>
-         <a href="/images/LaTex/imginsr1"><img src="/images/LaTex/imginsr1.png" alt=""></a>
+         <a href="/images/LaTex/imginsr1.png"><img src="/images/LaTex/imginsr1.png" alt=""></a>
 	</center>
 </figure>
 
@@ -164,11 +165,12 @@ $ a + b = c $
 	\label{fig1}
 \end{figure}
 ```
-若想两张图并列显示，将法**二**中的`\quad`取消注释，并调整`width=0.5\textwidth`。
+若想两张图并列显示，将**法二**中的`\quad`取消注释，并调整`width=0.5\textwidth`。
 
+效果：
 <figure>
 	<center>
-         <a href="/images/LaTex/imginsr2"><img src="/images/LaTex/imginsr2.png" alt=""></a>
+         <a href="/images/LaTex/imginsr2.png"><img src="/images/LaTex/imginsr2.png" alt=""></a>
 	</center>
 </figure>
 
@@ -189,9 +191,12 @@ $ a + b = c $
 	\caption{四只狗狗}
 \end{figure}
 ```
-
+效果：
 <figure>
 	<center>
-         <a href="/images/LaTex/imginsr3"><img src="/images/LaTex/imginsr3.png" alt=""></a>
+         <a href="/images/LaTex/imginsr3.png"><img src="/images/LaTex/imginsr3.png" alt=""></a>
 	</center>
 </figure>
+
+
+## To be continued
