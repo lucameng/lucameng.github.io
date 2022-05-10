@@ -16,13 +16,17 @@ ___
 
 ```
 \documentclass[UTF8]{ctexart}
+
 %%%%%%%%%%%
 %%package%%
 %%%%%%%%%%%
+
 \begin{document}
+
 %%%%%%%%%%%
 %%content%%
 %%%%%%%%%%%
+
 \end{document}
 ```
 
