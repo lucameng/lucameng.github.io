@@ -57,15 +57,15 @@ ___
 \usepackage{amsmath, amsfonts, amsthm, stackrel, amssymb}   % 用于插入公式
 ```
 
-- format
+#### format
 
-1. 行内公式
+- 行内公式
 
 ```tex
 $ a + b = c $
 ```
 
-2. 行间公式
+- 行间公式
 
 例如：
 
@@ -92,12 +92,32 @@ $ a + b = c $
 小初号 　36pt 　　　  　12.65mm　　　　   Huge
 初号 　　42pt 　　　  　14.76mm
 ```
-3. 公式换行，等号对齐
+- 公式换行，等号对齐
 
+公式换行可利用`\\`，等号对齐可利用`align`和`&`。
+
+例如：
+
+```tex
+\begin{equation}
+    \begin{align}
+        a + b &= c + d \\
+            &= e
+    \end{align}
+\end{equation}
+```
+
+效果：
+
+<figure>
+	<p style="text-align: center;">
+         <a href="/images/LaTex/formula1.png"><img src="/images/LaTex/formula1.png" alt=""></a>
+	</p>
+</figure>
 
 ### Image Insert
 
-- package
+#### package
 
 ```tex
 \usepackage{graphicx}
@@ -105,9 +125,9 @@ $ a + b = c $
 \usepackage{subfig}         % 多张图片排列
 ```
 
-- format
+#### format
 
-1. 一张图片
+- 一张图片
 
 
 ```tex
@@ -121,7 +141,7 @@ $ a + b = c $
 
 其中`H`表示图片悬浮。
 
-2. 两张图片
+- 两张图片
 
 第一种方法：
 
@@ -144,9 +164,9 @@ $ a + b = c $
 
 效果：
 <figure>
-	<center>
+	<p style="text-align: center;">
          <a href="/images/LaTex/imginsr1.png"><img src="/images/LaTex/imginsr1.png" alt=""></a>
-	</center>
+	</p>
 </figure>
 
 第二种方法：
@@ -169,12 +189,12 @@ $ a + b = c $
 
 效果：
 <figure>
-	<center>
+	<p style="text-align: center;">
          <a href="/images/LaTex/imginsr2.png"><img src="/images/LaTex/imginsr2.png" alt=""></a>
-	</center>
+	</p>
 </figure>
 
-3. 四张图片田字形排列
+- 四张图片田字形排列
 
 ```tex
 \begin{figure}[H]
@@ -201,7 +221,7 @@ $ a + b = c $
 
 ### Code Listing
 
-1. python code
+#### python code
 
 - package
 
@@ -251,7 +271,7 @@ $ a + b = c $
 \end{lstlisting}
 ```
 
-1. other code
+#### other code
 
 修改`\lstset`中的`languege`。
 
@@ -293,4 +313,4 @@ $ a + b = c $
 
 
 
-## To be continued
+### To be continued...
