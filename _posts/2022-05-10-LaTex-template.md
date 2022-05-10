@@ -49,17 +49,19 @@ ___
 \usepackage{stackrel}   
 % \usepackage[fleqn]{amsmath}               % 这样是设置全局公式左对齐
 % \numberwithin{equation}{subsection}       % 改变公式编号 (1.1.1)
+```
 
-% 也可以写成一行
+也可以写成一行
+
+```tex
 \usepackage{amsmath, amsfonts, amsthm, stackrel, amssymb}   % 用于插入公式
-
 ```
 
 - format
 
 1. 行内公式
 
-```
+```tex
 $ a + b = c $
 ```
 
@@ -142,24 +144,13 @@ $ a + b = c $
 
 <figure>
 	<center>
-         <a href="/images/LaTex/imginsr1"><img src="/images/LaTex/imginsr1" alt=""></a>
+         <a href="/images/LaTex/imginsr1"><img src="/images/LaTex/imginsr1.png" alt=""></a>
 	</center>
 </figure>
 
 第二种方法：
 
 ```tex
-\begin{figure}[H]
-	\centering  
-	\subfloat[]{
-	\includegraphics[width=0.5\textwidth]{./pics/sellproc.png}} 
-    % \quad  % 图片换行
-    \subfloat[]{
-	\includegraphics[width=0.5\textwidth]{./pics/sellproc.png}}
-	\caption{图片描述}
-	\label{fig1}
-\end{figure}
-
 \begin{figure}[H]
 	\centering
     % 可在subfloat的[]内单独为每张小图命名，否则默认按照(a)(b)...方式命名
@@ -177,7 +168,7 @@ $ a + b = c $
 
 <figure>
 	<center>
-         <a href="/images/LaTex/imginsr2"><img src="/images/LaTex/imginsr2" alt=""></a>
+         <a href="/images/LaTex/imginsr2"><img src="/images/LaTex/imginsr2.png" alt=""></a>
 	</center>
 </figure>
 
@@ -197,11 +188,10 @@ $ a + b = c $
 		\includegraphics[width=2 in]{./pics/dog.jpg}}
 	\caption{四只狗狗}
 \end{figure}
-
 ```
 
 <figure>
 	<center>
-         <a href="/images/LaTex/imginsr3"><img src="/images/LaTex/imginsr3" alt=""></a>
+         <a href="/images/LaTex/imginsr3"><img src="/images/LaTex/imginsr3.png" alt=""></a>
 	</center>
 </figure>
