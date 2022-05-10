@@ -32,3 +32,172 @@ ___
 
 `\begin{document}`和`\end{document}`之间的部分就是正文。
 
+## Some Templates 
+
+### mathematical expression
+
+- package
+
+```
+\usepackage{amsmath}                        % 最基本的包
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{stackrel}   
+% \usepackage[fleqn]{amsmath}               % 这样是设置全局公式左对齐
+% \numberwithin{equation}{subsection}       % 改变公式编号 (1.1.1)
+
+% 也可以写成一行
+\usepackage{amsmath, amsfonts, amsthm, stackrel, amssymb}   % 用于插入公式
+
+```
+
+- format
+
+1. 行内公式
+
+```
+$formula$
+```
+
+2. 行间公式
+
+例如：
+
+```
+\begin{normalsize}
+    \begin{equation}
+        a+b=c
+    \end{equation}
+\end{normalsize} 
+```
+
+在第一个\begin中可定义公式大小，可参照：
+
+```
+七号 　　5.25pt 　　    1.845mm　　　　  tiny
+六号 　　7.875pt 　　   2.768mm　　　　  scriptsize
+小五号 　9pt 　　　　    3.163mm　　　　  footnotesize
+五号 　　10.5pt 　　    3.69mm　　　　   small
+小四号 　12pt 　　　　   4.2175mm　　　  normalsize
+四号 　　13.75pt 　　   4.83mm　　　　   large
+三号 　　15.75pt 　　   5.53mm　　　　   Large
+二号 　　21pt 　　　　   7.38mm         LARGE
+一号 　　27.5pt 　　    9.48mm　　　　   huge
+小初号 　36pt 　　　  　12.65mm　　　　   Huge
+初号 　　42pt 　　　  　 14.76mm
+```
+3. 公式换行，等号对齐
+
+
+### Image Insert
+
+- package
+
+```
+\usepackage{graphicx}
+\usepackage{float}          % 图片悬浮文字上方
+\usepackage{subfig}         % 多张图片排列
+```
+
+- format
+
+1. 一张图片
+
+`H`表示图片悬浮
+
+```
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{pics/sellproc.png}
+    \caption{图片描述}
+    \label{fig:1}
+\end{figure}
+```
+
+1. 两张图片
+
+第一种方法：
+
+```
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=6cm]{pics/dog.jpg}
+    \caption{狗狗1}
+    \end{minipage}
+    \quad
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=6cm]{pics/dog.jpg}
+    \caption{狗狗2}
+    \end{minipage}
+\end{figure}
+```
+
+<figure>
+	<center>
+         <a href="/images/LaTex/imginsr1"></a>
+	</center>
+</figure>
+
+第二种方法：
+
+```
+\begin{figure}[H]
+	\centering
+    
+	\subfloat[]{
+	\includegraphics[width=0.5\textwidth]{pics/sellproc.png}} 
+    % \quad  % 图片换行
+    \subfloat[]{
+	\includegraphics[width=0.5\textwidth]{pics/sellproc.png}}
+	\caption{图片描述}
+	\label{fig1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+    % 可在subfloat的[]内单独为每张小图命名，否则默认按照(a)(b)...方式命名
+	\subfloat[狗狗1]{
+	\includegraphics[width=0.48\textwidth]{pics/dog.jpg}} 
+    % 图形换行命令
+    % \quad  
+    \subfloat[狗狗2]{
+	\includegraphics[width=0.48\textwidth]{pics/dog.jpg}}
+	\caption{两只狗狗}
+	\label{fig1}
+\end{figure}
+```
+若想两张图并列显示，将法**二**中的`\quad`取消注释，并调整`width=0.5\textwidth`。
+
+<figure>
+	<center>
+         <a href="/images/LaTex/imginsr2"></a>
+	</center>
+</figure>
+
+3. 四张图片田字形排列
+
+```
+\begin{figure}[H]
+	\centering
+	\subfloat[狗狗1]{。
+		\includegraphics[width=2 in]{pics/dog.jpg}}
+	\subfloat[狗狗2]{
+		\includegraphics[width=2 in]{pics/dog.jpg}}
+	\quad
+	\subfloat[狗狗3]{
+		\includegraphics[width=2 in]{pics/dog.jpg}}
+	\subfloat[狗狗4]{
+		\includegraphics[width=2 in]{pics/dog.jpg}}
+	\caption{四只狗狗}
+\end{figure}
+
+```
+
+<figure>
+	<center>
+         <a href="/images/LaTex/imginsr3"></a>
+	</center>
+</figure>
