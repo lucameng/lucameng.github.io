@@ -248,7 +248,7 @@ ___
 
 #### package
 
-普通的表格不需要额外引入宏包，但当你需要你的表格单元占据多个行或者列时，就要引入下列的宏包：
+普通的表格不需要额外引入宏包，但当你需要你的表格单元**占据多个行或者列**时，就要引入下列的宏包：
 
 ```tex
 \usepackage{multirow}       % Required for multirows
@@ -258,7 +258,7 @@ ___
 
 LaTex里的表格是一行行来绘制的，每一行里面用`&`来分隔各个元素，用`\\`来结束当前这一行的绘制。
 
-`\hline`的作用是画一整条横线，如果想画一条只经过部分列的横线，则可以用`cline{a-b}`，代表的是画一条从第a列到第b列的横线。
+`\hline`的作用是画一整条横线，如果想画一条只经过部分列的横线，则可以用`cline{a-b}`，代表的是画一条从第`a`列到第`b`列的横线。
 
 `multirow`和`multicolumn`的格式如下：
 
@@ -267,7 +267,7 @@ LaTex里的表格是一行行来绘制的，每一行里面用`&`来分隔各个
 \multicolumn{NUMBER_OF_COLUMNS}{ALIGNMENT}{CONTENT}
 ```
 
-NUMBER_OF_ROWS代表该表格单元占据的行数，WIDTH代表表格的宽度，一般填 * 代表自动宽度，CONTENT则是表格单元里的内容。
+`NUMBER_OF_ROWS`代表该表格单元占据的行数，`WIDTH`代表表格的宽度，一般填`*`代表自动宽度，`CONTENT`则是表格单元里的内容。
 
 ```tex
 \multicolumn{NUMBER_OF_COLUMNS}{ALIGNMENT}{CONTENT}
