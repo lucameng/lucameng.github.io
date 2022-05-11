@@ -22,10 +22,11 @@ image:
     - [package](#package-2)
     - [format](#format-2)
   - [Code Listing](#code-listing)
-    - [python code](#python-code)
-    - [other code](#other-code)
+    - [package](#package-3)
+    - [format](#format-3)
   - [Reference](#reference)
-    - [How to refer?](#how-to-refer)
+    - [package](#package-4)
+    - [format](#format-4)
 - [Page Font](#page-font)
 
 
@@ -310,9 +311,8 @@ ___
 
 ### Code Listing
 
-#### python code
 
-- package
+#### package
 
 ```tex
 \usepackage{caption}
@@ -349,7 +349,7 @@ ___
 	</p>
 </figure>
 
-- format
+#### format
 
 ```tex
 \begin{lstlisting}[caption = your caption]
@@ -359,7 +359,7 @@ ___
 \end{lstlisting}
 ```
 
-#### other code
+- other code
 
 修改`\lstset`中的`languege`。
 
@@ -377,9 +377,11 @@ ___
 
 ### Reference
 
+#### package
+
 参考文献部分包含在`content`中，不需要额外引入宏包。
 
-- format
+#### format
 
 ```tex
 \newpage    %新的一页
@@ -399,7 +401,7 @@ ___
 	</p>
 </figure>
 
-#### How to refer?
+- How to refer?
 
 正文中的引用标注：
 
