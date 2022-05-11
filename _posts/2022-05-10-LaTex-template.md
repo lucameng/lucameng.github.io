@@ -18,10 +18,14 @@ image:
   - [Image Insert](#image-insert)
     - [package](#package-1)
     - [format](#format-1)
+  - [Table](#table)
+    - [package](#package-2)
+    - [format](#format-2)
   - [Code Listing](#code-listing)
     - [python code](#python-code)
     - [other code](#other-code)
   - [Reference](#reference)
+    - [How to refer?](#how-to-refer)
 - [Page Font](#page-font)
 
 
@@ -240,6 +244,70 @@ ___
 
 ___
 
+### Table
+
+#### package
+
+普通的表格不需要额外引入宏包，但当你需要你的表格单元占据多个行或者列时，就要引入下列的宏包：
+
+```tex
+\usepackage{multirow}       % Required for multirows
+```
+
+#### format
+
+LaTex里的表格是一行行来绘制的，每一行里面用`&`来分隔各个元素，用`\\`来结束当前这一行的绘制。
+
+`\hline`的作用是画一整条横线，如果想画一条只经过部分列的横线，则可以用`cline{a-b}`，代表的是画一条从第a列到第b列的横线。
+
+`multirow`和`multicolumn`的格式如下：
+
+```tex
+\multirow{NUMBER_OF_ROWS}{WIDTH}{CONTENT} 
+\multicolumn{NUMBER_OF_COLUMNS}{ALIGNMENT}{CONTENT}
+```
+
+NUMBER_OF_ROWS代表该表格单元占据的行数，WIDTH代表表格的宽度，一般填 * 代表自动宽度，CONTENT则是表格单元里的内容。
+
+```tex
+\multicolumn{NUMBER_OF_COLUMNS}{ALIGNMENT}{CONTENT}
+```
+
+`NUMBER_OF_COLUMNS`代表该表格单元占据的列数，`ALIGNMENT`代表表格内容的偏移，`l`、`c`、`r`分别代表左对齐、居中和右对齐，`CONTENT`则是表格单元里的内容。
+
+
+例如：
+
+```tex
+\begin{table}[H]
+    \begin{center}
+      \caption{Multirow table.}
+      \label{tab:table1}
+      \begin{tabular}{c|c|c}
+        \textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3}\\
+        $\alpha$ & $\beta$ & $\gamma$ \\
+        \hline
+        \multirow{2}{*}{12} & 1110.1 & a\\  % <-- Combining 2 rows with arbitrary with (*) and content 12
+        & 10.1 & b\\                        % <-- Content of first column omitted.
+        \hline
+        3 & 23.113231 & c\\
+        4 & 25.113231 & d\\
+      \end{tabular}
+    \end{center}
+  \end{table}
+```
+
+效果：
+
+<figure>
+	<p style="text-align: center;">
+         <a href="/images/LaTex/table.png"><img src="/images/LaTex/table.png" alt=""></a>
+	</p>
+</figure>
+
+
+___
+
 ### Code Listing
 
 #### python code
@@ -284,10 +352,10 @@ ___
 - format
 
 ```tex
-\begin{lstlisting}[caption = EM算法]
-     
-    %your python code
-                   
+\begin{lstlisting}[caption = your caption]
+    %%%%%%%%%%%%%%%%%%%%%%
+    %% your python code %%
+    %%%%%%%%%%%%%%%%%%%%%%
 \end{lstlisting}
 ```
 
@@ -330,6 +398,16 @@ ___
          <a href="/images/LaTex/ref.png"><img src="/images/LaTex/ref.png" alt=""></a>
 	</p>
 </figure>
+
+#### How to refer?
+
+正文中的引用标注：
+
+```tex
+\cite{ref1}
+```
+
+注意`{}`中的部分要与参考文献中的`\bibitem{}`相对应。
 
 ___
 
