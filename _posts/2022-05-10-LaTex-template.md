@@ -210,7 +210,6 @@ ___
 	\label{fig1}
 \end{figure}
 ```
-若想两张图并列显示，将**法二**中的`\quad`取消注释，并调整`width=0.5\textwidth`。
 
 效果：
 <figure>
@@ -218,6 +217,8 @@ ___
          <a href="/images/LaTex/imginsr2.png"><img src="/images/LaTex/imginsr2.png" alt=""></a>
 	</p>
 </figure>
+
+若想两张图并列显示，将**法二**中的`\quad`取消注释，并调整`width`。
 
 - 四张图片田字形排列
 

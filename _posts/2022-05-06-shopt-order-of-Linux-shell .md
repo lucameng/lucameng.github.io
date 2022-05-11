@@ -50,12 +50,12 @@ $ shopt -s globstar
 
 Turn on `globstar` parameter, then you can search file more convenient.
 
-For example, I'm gonna search file with the `.bin` suffix.
+For example, I'm gonna search file with the `.bin` extension.
 
 ```bash
 $ ls **/*.bin
 ```
-Then all the file with the `.bin` suffix prompt to your terminal, no matter the file is in the current directory or not. You are not allow to do so if you don't turn on the `globstar` param.
+Then all the file with the `.bin` extension prompt to your terminal, no matter the file is in the current directory or not. You are not allow to do so if you don't turn on the `globstar` param.
 
 Reminded that Linux is case[^2] sensitive, Turn on `nocaseglob` parameter so that it does't match case when searching for files. 
 
