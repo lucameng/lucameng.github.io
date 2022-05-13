@@ -1,6 +1,6 @@
 ---
 layout: post
-title: \#1:\ 1Image classification from scratch
+title: #1: 1Image classification from scratch
 description: "从零开始深度学习——图像分类"
 tags: [Machine Learning, Deep Learning]
 image:
