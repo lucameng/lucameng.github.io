@@ -23,26 +23,36 @@ ___
 	</p>
 </figure>
 
+自上张专辑发行已有1855天...
 ___
 
 Here are a few songs I like the most
 
 - **Die Hard**
 
-> Shimmy, shimmy, coco puff, Serafina, flame in us
-
-- Father Time
-
-> When Kanye got back with Drake, I was slightly confused. Guess I'm not mature as I think, got some healin' to do
-
-- We Cry Together
-
-> You know what? **** you, ***** (**** you, n****)
-
-- The Heart Part 5
+> "Shimmy, shimmy, coco puff, Serafina, flame in us"
 
 - Rich Spirit
 
+> 很爽的编曲
+
+- Father Time
+
+> "When Kanye got back with Drake, I was slightly confused. Guess I'm not mature as I think, got some healin' to do"
+
+- We Cry Together
+
+> "You know what? **** you, ***** (**** you, n****)"
+
+- The Heart Part 5
+
+> 变脸的艺术：MV里出现了Jussie Smollet，Nipsey Hussle，O.J. Simpson，Kobe Bryant，Kanye West，Will Smith
+
 - N95
 
+> 喇嘛心系疫情形势，提醒大家戴好N95口罩
+
 - Count Me Out
+
+
+To be continued...
