@@ -11,7 +11,7 @@ image:
 
 <figure>
 	<p style="text-align: center;">
-         <a href="/images/Kdot/eminem.jpg"><img src="/images/Kdot/eminem.jpg" width="300px" alt=""></a>
+         <a href="/images/Kdot/eminem.jpg"><img src="/images/Kdot/eminem.jpg" width="400px" alt=""></a>
 	</p>
 </figure>
 
@@ -19,7 +19,7 @@ ___
 
 <figure>
 	<p style="text-align: center;">
-         <a href="/images/Kdot/kdot.jpg"><img src="/images/Kdot/kdot.jpg" width="300px" alt=""></a>
+         <a href="/images/Kdot/kdot.jpg"><img src="/images/Kdot/kdot.jpg" width="500px" alt=""></a>
 	</p>
 </figure>
 
