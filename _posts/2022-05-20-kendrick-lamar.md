@@ -27,7 +27,7 @@ ___
 
 This album is named ***Mr. Morale & The Big Steppers***.
 
-Def hit one!!! You gon' love this on God.
+Def hit one!!! You gon love this on God.
 
 ___ 
 
@@ -40,26 +40,26 @@ Here are a few songs I like the most:
 
 - Rich Spirit
 
-> 编曲很nice
+  > 编曲很nice
 
 - Father Time
 
-> "When Kanye got back with Drake, I was slightly confused. Guess I'm not mature as I think, got some healin' to do"
+  > "When Kanye got back with Drake, I was slightly confused. Guess I'm not mature as I think, got some healin' to do"
 
 - We Cry Together
 
-> "You know what? ****** you, ******* (****** you, n******)"
+  > "You know what? ****** you, ******* (****** you, n******)"
 
 - The Heart Part 5
 
-> 变脸的艺术：MV里出现了Jussie Smollet，Nipsey Hussle，O.J. Simpson，Kobe Bryant，Kanye West，Will Smith。
+  > 变脸的艺术：MV里出现了Jussie Smollet，Nipsey Hussle，O.J. Simpson，Kobe Bryant，Kanye West，Will Smith。
 
 - N95
 
-> 喇嘛心系疫情形势，提醒大家戴好N95口罩。
+  > 喇嘛心系疫情形势，提醒大家戴好N95口罩。
 
 - Count Me Out
 
-> 这首歌直接放kanye的专辑里不会有违和感。
+  > 这首歌直接放kanye的专辑里不会有违和感。
 
 To be continued...
