@@ -23,19 +23,22 @@ ___
 	</p>
 </figure>
 
-自上张专辑发行已有1855天...
+1855 day since last album out...
 
-___
+This album is named *Mr. Morale & The Big Steppers*. Def hit one!!! You gon' love this on God.
 
-Here are a few songs I like the most
+___ 
+
+Here are a few songs I like the most:
 
 - **Die Hard**
 
-> "Shimmy, shimmy, coco puff, Serafina, flame in us"
+> "Shimmy, shimmy, coco puff, Serafina, flame in us"  
+> Best of the Album personally speaking
 
 - Rich Spirit
 
-> 很爽的编曲
+> 编曲很nice
 
 - Father Time
 
@@ -47,13 +50,14 @@ Here are a few songs I like the most
 
 - The Heart Part 5
 
-> 变脸的艺术：MV里出现了Jussie Smollet，Nipsey Hussle，O.J. Simpson，Kobe Bryant，Kanye West，Will Smith
+> 变脸的艺术：MV里出现了Jussie Smollet，Nipsey Hussle，O.J. Simpson，Kobe Bryant，Kanye West，Will Smith。
 
 - N95
 
-> 喇嘛心系疫情形势，提醒大家戴好N95口罩
+> 喇嘛心系疫情形势，提醒大家戴好N95口罩。
 
 - Count Me Out
 
+> 这首歌直接放kanye的专辑里不会有违和感。
 
 To be continued...
