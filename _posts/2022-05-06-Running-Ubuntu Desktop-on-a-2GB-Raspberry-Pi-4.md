@@ -35,13 +35,13 @@ Since zswap is supported by default, you can enable it with a simple command.
 
 Enter the following into your terminal:
 
-(% raw %)
+{% raw %}
 
 ```sh
 $ sudo sed -i -e 's/$/ zswap.enabled=1/' /boot/firmware/cmdline.txt
 ```
 
-(% endraw %)
+{% endraw %}
 
 For newer Linux users, this command is basically a shortcut to edit the cmdline.txt file in your boot folder and set the **zswap.enabled** parameter to ‘True’ (1).
 
@@ -68,7 +68,7 @@ $ sudo -i
 
 This will prompt you for your password and put you into **root mode** where you can enter the following commands:
 
-(% raw %)
+{% raw %}
 
 ```sh
 # echo lz4 >> /etc/initramfs-tools/modules
@@ -76,17 +76,17 @@ This will prompt you for your password and put you into **root mode** where you 
 # update-initramfs -u
 ```
 
-(% endraw %)
+{% endraw %}
 
 This adds lz4 and z3fold modules to your initramfs so that they can be accessed on initialisation. Wait for the **update-initramfs** process to complete and then type:
 
-(% raw %)
+{% raw %}
 
 ```bash
 # exit
 ```
 
-(% endraw %)
+{% endraw %}
 
 To return to your normal user mode.
 
@@ -106,6 +106,7 @@ $ grep -R . /sys/module/zswap/parameters
 ```
 
 If you’ve configured things correctly then the output should look like this:
+
 
 ```bash
 /sys/module/zswap/parameters/same_filled_pages_enabled:Y
