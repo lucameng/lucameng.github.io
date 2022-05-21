@@ -35,8 +35,8 @@ Here are a few songs I like the most:
 
 - **Die Hard**
 
-> "Shimmy, shimmy, coco puff, Serafina, flame in us"  
-> Best of the Album personally speaking
+  > "Shimmy, shimmy, coco puff, Serafina, flame in us"  
+  > Best of the Album personally speaking
 
 - Rich Spirit
 
