@@ -25,7 +25,9 @@ ___
 
 1855 day since last album out...
 
-This album is named *Mr. Morale & The Big Steppers*. Def hit one!!! You gon' love this on God.
+This album is named ***Mr. Morale & The Big Steppers***.
+
+Def hit one!!! You gon' love this on God.
 
 ___ 
 
