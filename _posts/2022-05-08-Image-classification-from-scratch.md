@@ -470,11 +470,11 @@ def make_model(input_shape, num_classes):
 
     # Entry block
     x = layers.Rescaling(1.0 / 255)(x)
-    x = layers.Conv2D(32, 3, strides = 2, padding = "same")(x)
+    x = layers.Conv2D(32, 3, strides=2, padding="same")(x)
     x = layers.BatchNormalization()(x)
     x = layers.Activation("relu")(x)
 
-    x = layers.Conv2D(64, 3, padding = "same")(x)
+    x = layers.Conv2D(64, 3, padding="same")(x)
     x = layers.BatchNormalization()(x)
     x = layers.Activation("relu")(x)
 
@@ -482,23 +482,23 @@ def make_model(input_shape, num_classes):
 
     for size in [128, 256, 512, 728]:   # 卷积层输出空间的维数
         x = layers.Activation("relu")(x)
-        x = layers.SeparableConv2D(size, 3, padding = "same")(x)
+        x = layers.SeparableConv2D(size, 3, padding="same")(x)
         x = layers.BatchNormalization()(x)
 
         x = layers.Activation("relu")(x)
-        x = layers.SeparableConv2D(size, 3, padding = "same")(x)
+        x = layers.SeparableConv2D(size, 3, padding="same")(x)
         x = layers.BatchNormalization()(x)
 
-        x = layers.MaxPooling2D(3, strides = 2, padding = "same")(x)
+        x = layers.MaxPooling2D(3, strides=2, padding="same")(x)
 
         # Project residual
-        residual = layers.Conv2D(size, 1, strides = 2, padding = "same")(
+        residual = layers.Conv2D(size, 1, strides=2, padding="same")(
             previous_block_activation
         )
         x = layers.add([x, residual])  # Add back residual
         previous_block_activation = x  # Set aside next residual
 
-    x = layers.SeparableConv2D(1024, 3, padding = "same")(x)
+    x = layers.SeparableConv2D(1024, 3, padding="same")(x)
     x = layers.BatchNormalization()(x)
     x = layers.Activation("relu")(x)
 
@@ -511,12 +511,12 @@ def make_model(input_shape, num_classes):
         units = num_classes
 
     x = layers.Dropout(0.5)(x)
-    outputs = layers.Dense(units, activation = activation)(x)
+    outputs = layers.Dense(units, activation=activation)(x)
     return keras.Model(inputs, outputs)
 
 
 model = make_model(input_shape = image_size + (3,), num_classes=2)
-keras.utils.plot_model(model, show_shapes = True)
+keras.utils.plot_model(model, show_shapes=True)
 
 epochs = 50
 

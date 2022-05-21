@@ -35,9 +35,13 @@ Since zswap is supported by default, you can enable it with a simple command.
 
 Enter the following into your terminal:
 
-```shell
+(% raw %)
+
+```sh
 $ sudo sed -i -e 's/$/ zswap.enabled=1/' /boot/firmware/cmdline.txt
 ```
+
+(% endraw %)
 
 For newer Linux users, this command is basically a shortcut to edit the cmdline.txt file in your boot folder and set the **zswap.enabled** parameter to ‘True’ (1).
 
@@ -64,17 +68,25 @@ $ sudo -i
 
 This will prompt you for your password and put you into **root mode** where you can enter the following commands:
 
-```shell
-echo lz4 >> /etc/initramfs-tools/modules
-echo z3fold >> /etc/initramfs-tools/modules
-update-initramfs -u
+(% raw %)
+
+```sh
+# echo lz4 >> /etc/initramfs-tools/modules
+# echo z3fold >> /etc/initramfs-tools/modules
+# update-initramfs -u
 ```
+
+(% endraw %)
 
 This adds lz4 and z3fold modules to your initramfs so that they can be accessed on initialisation. Wait for the **update-initramfs** process to complete and then type:
 
+(% raw %)
+
 ```bash
-exit
+# exit
 ```
+
+(% endraw %)
 
 To return to your normal user mode.
 
