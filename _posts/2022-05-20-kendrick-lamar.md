@@ -43,7 +43,7 @@ Here are a few songs I like the most
 
 - We Cry Together
 
-> "You know what? **** you, ***** (**** you, n****)"
+> "You know what? ****** you, ******* (****** you, n******)"
 
 - The Heart Part 5
 
