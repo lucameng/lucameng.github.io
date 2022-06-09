@@ -44,7 +44,7 @@ Here are a few songs I like the most:
 
 - Father Time
 
-  > "When Kanye got back with Drake, I was slightly confused. Guess I'm not mature as I think, got some healin' to do"
+  > "When Kanye got back with Drake, I was slightly confused. Guess I'm not mature as I think, got some healin to do"
 
 - We Cry Together
 
