@@ -415,7 +415,8 @@ ___
 > Nvidia-Driver-510  
 > CUDA-11.6, cuDNN-7.6.5  
 > tensorflow-gpu 2.8.0  
-一个epoch耗时约252s。
+
+一个epoch耗时约252s
 
 ```python
 import tensorflow as tf
