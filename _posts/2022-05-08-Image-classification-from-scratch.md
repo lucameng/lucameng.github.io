@@ -409,8 +409,12 @@ ___
 
 以下是**训练模型**的全部代码。
 
-测试环境：Nvidia GeForce gtx 1650, Ubuntu 20.04.  
-Nvidia-Driver-510, CUDA-11.6, cuDNN-7.6.5, tensorflow-gpu 2.8.0.  
+> 测试环境：  
+> Nvidia GeForce gtx 1650  
+> Ubuntu 20.04  
+> Nvidia-Driver-510  
+> CUDA-11.6, cuDNN-7.6.5  
+> tensorflow-gpu 2.8.0  
 一个epoch耗时约252s。
 
 ```python
@@ -673,7 +677,7 @@ print("Deleted %d images" %i)
 ```
 在前述三种方法的基础上，又多删了13张照片。
 
-我**并不建议**你使用这种方法，因为它会**eats**你的CPU cycles并会占用你**几乎所有**内存。如果你对`subprocess`感兴趣，可以看[这里](https://www.runoob.com/w3cnote/python3-subprocess.html)（谁看到这不感叹一句：What a thoughtful[^1] blogger）。
+我**并不建议**你使用这种方法，因为它会**eats**你的CPU cycles并会占用你**几乎所有**内存。如果你对`subprocess`感兴趣，可以看[这里](https://www.runoob.com/w3cnote/python3-subprocess.html)，如果你对`ImageMagick`感兴趣，可以看[这里](https://imagemagick.org/)（谁看到这不感叹一句：What a thoughtful[^1] blogger）。
 
 **但是**，通过这种方法删除照片，**几乎能把所有损坏照片删干净**
 
