@@ -25,7 +25,7 @@ image:
 #!/bin/sh
 ```
 
-这一行用于指定解释器，以`#!`字符开头，这个字符称为shebang[^1]，所以这一行通常称为shebang行，例如我们在写python脚本文件时，可以这样指定解释器：
+这一行用于指定解释器，以`#!`字符开头，这个字符称为shebang[^1]（#读作shell,!读作bang），所以这一行通常称为shebang行，例如我们在写python脚本文件时，可以这样指定解释器：
 
 ```bash
 #!/usr/bin/python3
@@ -167,7 +167,7 @@ $ myscript
 
 ## 进一步学习
 
-详见[Bash脚本教程](https://wangdoc.com/bash/script.html)
+详见[网道-Bash脚本教程](https://wangdoc.com/bash/script.html)
 
 
 <br/>
