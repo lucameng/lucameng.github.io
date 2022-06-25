@@ -2,6 +2,7 @@
 layout: post
 title: LaTex Template
 description: "一些LaTex常用模板"
+modified: 2022-06-25
 tags: [LaTex]
 image:
   path: /images/abstract-3.jpg
@@ -27,7 +28,9 @@ image:
   - [Reference](#reference)
     - [package](#package-4)
     - [format](#format-4)
-- [Page Font](#page-font)
+  - [LaTex列表](#latex列表)
+    - [无序列表](#无序列表)
+    - [有序列表](#有序列表)
 
 
 
@@ -429,7 +432,44 @@ ___
 
 ___
 
-## Page Font
+### LaTex列表
+
+#### 无序列表
+
+```tex
+\begin{itemize}
+    \item one
+    \item two
+    \item ...
+\end{itemize}
+```
+
+效果：
+
+<figure>
+	<p style="text-align: center;">
+         <a href="/images/LaTex/latex111.png"><img src="/images/LaTex/latex111.png" alt=""></a>
+	</p>
+</figure>
+
+#### 有序列表
+
+```tex
+\begin{enumerate}
+    \item one
+    \item two
+    \item ...
+\end{enumerate}
+```
+
+效果：
+
+<figure>
+	<p style="text-align: center;">
+         <a href="/images/LaTex/latex222.png"><img src="/images/LaTex/latex222.png" alt=""></a>
+	</p>
+</figure>
+
 
 
 
