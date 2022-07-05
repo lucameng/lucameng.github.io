@@ -10,7 +10,7 @@ image:
 
 ## Introduction
 
-> These day I have been reading *ADASIS_v2_Specification*. As a matter of fact, *ADASIS_v3* was already out there. So why do I have to *read ADAS_v2*? Only my mentor Roger knwos.  
+> These day I have been reading *ADASIS_v2_Specification*. As a matter of fact, *ADASIS_v3* was already out there. So why do I have to *read ADAS_v2* ? Only my mentor Roger knows.  
 > Below is my general review towards *ADASIS_v2_Specification*, just as a note for myself.
 
 ___
@@ -19,7 +19,7 @@ ___
 
 - ADAS Horizon Provider
 - ADAS Protocol 传输协议
-- ADAS Application
+- ADAS Application  
  - ADAS Resconstructor 数据重构（ADAS Horizon ->  Client side）
 
 ___
