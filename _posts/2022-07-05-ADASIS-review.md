@@ -17,10 +17,12 @@ ___
 
 ## main entities of ADAS applications
 
-- ADAS Horizon Provider
-- ADAS Protocol 传输协议
-- ADAS Application  
-   - ADAS Resconstructor 数据重构（ADAS Horizon ->  Client side）
+- ADAS Horizon Provider #地平线提供者
+- ADAS Protocol #传输协议
+- ADAS Application  #ADAS应用
+   - ADAS Resconstructor #数据重构（ADAS Horizon ->  Client side）
+
+> 电子地平线（Electric Horizon）是一种为车辆提供超视距道路交通信息的产品或者服务，例如超出传感器感知范围的道路（如曲率、坡度）、车道（如车道线形状、车道属性）、红绿灯（如位置、轮廓）信息。
 
 ___
 
@@ -70,8 +72,8 @@ the position of map entities and the vehical position is defined by the `path id
 ### Path Profiles
 
 - Profile Type
-- Profile Interpolation Type 插值
-- Profile offset
+- Profile Interpolation Type #插值
+- Profile offset #偏置
 - Profile Spot
 
 ### Profile
@@ -118,6 +120,5 @@ ___
 ## QUESTIONS to be addressed
 
 1. CAN bus: multyplexing (polymorphism)  
-2. Figure  
-3. Interpolation
+2. CAN layout
 
