@@ -20,7 +20,7 @@ ___
 - ADAS Horizon Provider
 - ADAS Protocol 传输协议
 - ADAS Application  
- - ADAS Resconstructor 数据重构（ADAS Horizon ->  Client side）
+   - ADAS Resconstructor 数据重构（ADAS Horizon ->  Client side）
 
 ___
 
