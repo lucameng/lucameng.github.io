@@ -47,6 +47,14 @@ The code higtlight seems to be not friendly to `bash` grammer. I'm going to figu
 
 I'm gonna expand the social share interface, probably add Weibo and Wechat. It will be implemented a few days later(after the deadlines of so many projects).
 
+___
+
+# Ideas need to be realized
+
+## Folk's Blog
+
+## Table of Content to be improved
+
 ### To be continued...
 
 <br/>
