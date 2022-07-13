@@ -64,34 +64,39 @@ ___
 
 ### Offsets
 
-the position of map entities and the vehical position is defined by the `path identifier` and the `distance from the start of path`--`Offset`
+> the position of map entities and the vehical position is defined by the `path identifier` and the `distance from the start of path`--`Offset`
 
 - 13 bits available
 
 
-### Path Profiles
+### Profile
+
+> **Characteristic** of a path that has a defined value.
+
+Attributes:
 
 - Profile Type
 - Profile Interpolation Type #插值
 - Profile offset #偏置
 - Profile Spot
 
-### Profile
-
-Characteristic of a path that has a defined value.
 
 Typical examples:
 
 - Road curvature  
-- road heading
+- Road heading
 
 ### Stub
+
+> indicates the start of a new path that has origin at an existing one.
 
 - Value 5: used for systems with very low bandwidth or storage capacity...  
 - Value 6: provides information for the continuation of the main path such as TURN ANGLE and RELATIVE PROBABILITY.  
 - Value 8 to 63: Normal STUB message  
   
 ### Segment
+
+> specifies the most important attributes of a part of the path.
 
 ___
 

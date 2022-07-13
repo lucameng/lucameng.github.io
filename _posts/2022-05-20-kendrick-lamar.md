@@ -27,7 +27,7 @@ ___
 
 This album is named ***Mr. Morale & The Big Steppers***.
 
-Def hit one!!! You gon love this on God.
+Def hit one!!! Yall gon love dis on GOD.
 
 ___ 
 
