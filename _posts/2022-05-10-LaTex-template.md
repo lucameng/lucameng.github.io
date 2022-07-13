@@ -54,7 +54,7 @@ ___
 \end{document}
 ```
 
-每一篇LaTex文档都要以上面的格式为base。`ctex`为中文文档的类，`\documentclass`的类除了`ctexart`，还有`ctexrep`、`ctexbook`和`ctexbeamer`，分别与纯英文文档的`article`、`report`、`book`和`beamer`相对应。
+每一篇LaTex文档都要以上面的格式为base。`ctex`[^1]为中文文档的类，`\documentclass`的类除了`ctexart`，还有`ctexrep`、`ctexbook`和`ctexbeamer`，分别与纯英文文档的`article`、`report`、`book`和`beamer`相对应。
 
 位于`\documentclass`和`\begin{document}`之间的部分称为“导言”，用来引入LaTex包。例如当你在正文要插入图片时，要在这部分加上`\usepackage{graphicx}`以引入`graphicx`包。除此之外，在这部分还可以自定义页面高度、页眉页脚、行间距等**特性**。
 
@@ -476,3 +476,8 @@ ___
 ___
 
 To be continued...
+
+
+___
+
+[^1]: 虽然cTex并不被推荐使用，但笔者认为平时写一写小文章是完全ok的
