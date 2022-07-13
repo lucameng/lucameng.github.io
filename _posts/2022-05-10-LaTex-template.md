@@ -14,19 +14,19 @@ image:
 - [Base Format](#base-format)
 - [Some Templates](#some-templates)
   - [Mathematical Expression](#mathematical-expression)
-    - [package](#package)
+    - [package{ignore=true}](#packageignoretrue)
     - [format](#format)
   - [Insert an Image](#insert-an-image)
-    - [package](#package-1)
+    - [package](#package)
     - [format](#format-1)
   - [Table](#table)
-    - [package](#package-2)
+    - [package](#package-1)
     - [format](#format-2)
   - [Code Listing](#code-listing)
-    - [package](#package-3)
+    - [package](#package-2)
     - [format](#format-3)
   - [Reference](#reference)
-    - [package](#package-4)
+    - [package](#package-3)
     - [format](#format-4)
   - [LaTex列表](#latex列表)
     - [无序列表](#无序列表)
@@ -66,7 +66,7 @@ ___
 
 ### Mathematical Expression
 
-#### package
+#### package{ignore=true}
 
 ```tex
 \usepackage{amsmath}                        % 最基本的包
