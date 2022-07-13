@@ -11,7 +11,7 @@ image:
 ## Introduction
 
 > These day I have been reading *ADASIS_v2_Specification*. As a matter of fact, *ADASIS_v3* was already out there. So why do I have to *read ADAS_v2* ? Only my mentor Roger knows.  
-> Below is my general review towards *ADASIS_v2_Specification*, just as a note for myself.
+> Below is my general review towards *ADASIS_v2_Specification*, **just as a note for myself**.
 
 ___
 
