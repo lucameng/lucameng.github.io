@@ -16,7 +16,7 @@ image:
   - [Mathematical Expression](#mathematical-expression)
     - [package](#package)
     - [format](#format)
-  - [Image Insert](#image-insert)
+  - [Insert an Image](#insert-an-image)
     - [package](#package-1)
     - [format](#format-1)
   - [Table](#table)
@@ -143,7 +143,7 @@ $ a + b = c $
 
 ___
 
-### Image Insert
+### Insert an Image
 
 #### package
 
