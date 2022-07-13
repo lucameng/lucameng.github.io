@@ -2,6 +2,7 @@
 layout: post
 title: Customize my Theme
 description: "我是如何定制我的主题的？"
+modified: 2022-07-13
 tags: [Theme set-up]
 image:
   path: /images/abstract-10.jpg
