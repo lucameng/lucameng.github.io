@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Folks
+title: Friends & Folks
 description: "Check out my folks' blog"
 image:
   feature: abstract-11.jpg
