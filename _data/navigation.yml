@@ -3,8 +3,8 @@
 - title: Theme Setup
  url: /theme-setup/
 
-#- title: External Link
-# url: http://mademistakes.com
+- title: External Link
+url: http://mademistakes.com
 
-# - title: See my folks
-#  url: /folks/
+- title: Folks
+ url: /folks/
