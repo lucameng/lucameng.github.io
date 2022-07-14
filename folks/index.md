@@ -20,4 +20,4 @@ modified: 2022-07-14
 
 - See **[plumocean.github.io](https://yawning-lion.github.io/)**
 
-> Still in its infancy. Looking foward to seeing more posts from him.
+- Still in its infancy. Looking foward to seeing more posts from him.
