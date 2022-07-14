@@ -20,4 +20,4 @@ See [yawning-lion.github.io](https://yawning-lion.github.io/)
 
 See [plumocean.github.io](https://yawning-lion.github.io/)
 
-Still in its infancy. Looking foward to seeing more posts from his.
+Still in its infancy. Looking foward to seeing more posts from him.
