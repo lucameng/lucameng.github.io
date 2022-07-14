@@ -2,7 +2,7 @@
 layout: post
 title: Customize my Theme
 description: "我是如何定制我的主题的？"
-modified: 2022-07-13
+modified: 2022-07-14
 tags: [Theme set-up]
 image:
   path: /images/abstract-10.jpg
@@ -13,6 +13,8 @@ image:
 
 
 Last night I was tossing and turning, thinking of some fabulous ideas about how I customized this theme. And I'm gonna do a quick write-down in case my ideas are all gone. Click [here](https://mmistakes.github.io/jekyll-theme-hpstr/) to take a quick look at the original look of this theme. Let's get it started.
+
+___
 
 ## Minimalisation[^1]
 
@@ -48,11 +50,14 @@ The code higtlight seems to be not friendly to `bash` grammer. I'm going to figu
 
 I'm gonna expand the social share interface, probably add Weibo and Wechat. It will be implemented a few days later(after the deadlines of so many projects).
 
+
+## Folk's Blog
+
+Add an interface of `Friends & Folks` at the upper left **Menu navigation**. Now you can check out my friends' blog through that interface.
+
 ___
 
 # Ideas need to be realized
-
-## Folk's Blog
 
 ## Table of Content to be improved
 
