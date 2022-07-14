@@ -53,13 +53,15 @@ I'm gonna expand the social share interface, probably add Weibo and Wechat. It w
 
 ## Folk's Blog
 
-Add an interface of `Friends & Folks` at the upper left **Menu navigation**. Now you can check out my friends' blog through that interface.
+Add an interface of `Friends & Folks` at the upper left **Menu Navigation**. Now you can check out my friends' blog through that interface.
 
 ___
 
 # Ideas need to be realized
 
 ## Table of Content to be improved
+
+## Modify time to be disaplayed
 
 ### To be continued...
 
