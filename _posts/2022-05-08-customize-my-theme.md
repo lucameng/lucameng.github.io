@@ -32,7 +32,7 @@ To apply to that change, I also changed the `font size` of each word from 12px t
 
 I wanted to stick one of my posts on top of the home page. But it did't seem to be easy for me to implement due to lack of understanding of Jekyll grammer.
 
-With the help of my kind roomate [Will](https://willyangywt.cc), The design was successfully implemented with '**violence**', which is not a good implemention. I will think of a plan to better solve this problem.
+With the help of my kind roomate [Will](https://willyangywt.cc), The design was successfully implemented with '**violence**', which is not a good implementation. I will think of a plan to better solve this problem.
 
 Now, as you can see, the top post of my home page is [Guide/向导](https://lucameng.github.io/Guide/), which aims to give people some tips when they first come to ASTROWORLD.
 
@@ -40,7 +40,7 @@ Now, as you can see, the top post of my home page is [Guide/向导](https://luca
 
 The original code highlight block is great. But when I saw something better, 你会发现它瞬间不香了. At first the block was rectangle with sharp corner, which might be uncomfortable to some people(include me). After I turn the `border-radius` from 0 to `.75em`, the block has fillet[^2] now.
 
-Also I change the back ground color. It was totally **black** before, I turn it to be a **lighter dark** that is a similar to the default code block color of [CSDN](https://www.csdn.net/). The contrast between code block and plain block is lessened, which is visually better.
+Also I changed the back ground color. It was totally **black** before, I turned it to be a **lighter dark** that is similar to the default code block color of [CSDN](https://www.csdn.net/). The contrast between code block and plain block is lessened, which is visually better.
 
 The code higtlight seems to be not friendly to `bash` grammer. I'm going to figure out a good way to fix it though.
 
