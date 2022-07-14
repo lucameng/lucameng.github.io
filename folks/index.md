@@ -18,6 +18,6 @@ modified: 2022-07-14
 
 ## PlumOcean's blog
 
-- See [plumocean.github.io](https://yawning-lion.github.io/)
+- See [plumocean.github.io](https://plumocean.github.io/)
 
 - Still in its infancy. Look foward to seeing more posts from him.
