@@ -2,7 +2,7 @@
 layout: post
 title: LaTex Template
 description: "一些LaTex常用模板"
-modified: 2022-06-25
+modified: 2022-07-13
 tags: [LaTex]
 image:
   path: /images/abstract-3.jpg
