@@ -26,4 +26,6 @@ modified: 2022-07-20
 
 ---
 [^1]: Gaussian Distribution，又称正态分布
+
+
 {% endraw %}
