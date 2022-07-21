@@ -359,13 +359,13 @@ $
 
 <center>
 $
-\pmb{\hat{Z}} = \pmb{H} \pmb{\hat{X}}  
+\pmb{\hat{X}_{t+1}} = \pmb{F} \pmb{\hat{X}_{t}} + \pmb{B} \ddot{x_t} 
 $
 </center>
 
 <center>
 $
-\pmb{\Sigma} = \pmb{H} \pmb{P}  \pmb{H}^T 
+\pmb{P_{t+1}} = \pmb{F} \pmb{P_{t}}\pmb{F}^T + \pmb{Q}
 $
 </center>
 
