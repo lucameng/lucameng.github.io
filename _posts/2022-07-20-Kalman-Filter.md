@@ -216,17 +216,24 @@ $
 $
 </center>
 
-- 考虑外部因素$$ \pmb{u_k} $$，如引入**加速度** $$a$$:
+- 考虑外部因素$$ \pmb{u_k} $$，如引入**加速度** $$a_t = \ddot{x_t}$$:
 
 <center>
 $
-x_{t+1}=x_{t}+ \dot{x}_{t}\Delta t + \frac{1}{2} a \Delta t^2
+x_{t+1}=x_{t}+ \dot{x}_{t}\Delta t + \frac{1}{2} \ddot{x_t} \Delta t^2
 $
 </center>
 
 <center>
 $
-\dot{x}_{t+1}=\qquad \dot{x}_{t} + a \Delta t
+\dot{x}_{t+1}=\qquad \dot{x}_{t} + \ddot{x_t} \Delta t
+$
+</center>
+
+<center>
+$
+\pmb{\hat{X}_{t+1}} = \pmb{F_{t+1}} \pmb{\hat{X}_{t}} + \begin{bmatrix} \frac{1}{2} \Delta t^2\\
+          \Delta t \end{bmatrix} \ddot{x_t}
 $
 </center>
 
