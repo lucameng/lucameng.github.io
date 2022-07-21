@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Introduction to Kalman Filter
-description: "深入理解卡尔曼滤波"
+description: "什么是卡尔曼滤波"
 tags: [自动驾驶]
 image:
   feature: abstract-11.jpg
