@@ -145,10 +145,10 @@ $
 
 <center>
 $
-\pmb{X_t}=\begin{matrix}p\\
-          v \end{matrix}
-         =\begin{matrix}x_t\\
-          \dot{x_t} \end{matrix}
+\pmb{X_t}=\begin{array}p\\
+          v \end{array}
+         =\begin{array}x_t\\
+          \dot{x_t} \end{array}
 $
 </center>
 
