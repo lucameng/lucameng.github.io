@@ -147,7 +147,7 @@ $
 <center>
 $
 \pmb{X_t}=\begin{bmatrix}p\\
-          v \end{batrix}
+          v \end{bmatrix}
          =\begin{bmatrix}x_t\\
           \dot{x_t} \end{bmatrix}
 $
@@ -168,13 +168,13 @@ $
 
 <center>
 $
-\pmb{P_{t+1}}=\pmb{P_{t}}+\Delta v_{t}
+x_{t+1}=x_{t}+\Delta \dot{x_{t}}
 $
 </center>
 
 <center>
 $
-\pmb{v_{t+1}}=\qquad v_{t}
+\dot{x_{t+1}}=\qquad \quad \dot{v_{t}}
 $
 </center>
 
