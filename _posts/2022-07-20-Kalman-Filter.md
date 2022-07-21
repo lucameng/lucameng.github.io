@@ -51,10 +51,7 @@ $ N(\mu',{\sigma'}^2)=N(\mu',\sigma_1^2) \times N(\mu',\sigma_2^2)=N(\frac{\mu_1
 
 <center>
 $
-\mu'=\frac{\mu_1\sigma_2^2+\mu_2\sigma_1^2}{\sigma_1^2+\sigma_2^2}=\mu_1+\frac{\sigma_1^2(\mu_2-\mu_1)}{\sigma_1^2+\sigma_2^2}
-$
-
-$
+\mu'=\frac{\mu_1\sigma_2^2+\mu_2\sigma_1^2}{\sigma_1^2+\sigma_2^2}=\mu_1+\frac{\sigma_1^2(\mu_2-\mu_1)}{\sigma_1^2+\sigma_2^2}  \\
 {\sigma'}^2=\frac{\sigma_1^2\sigma_2^2}{\sigma_1^2+\sigma_2^2}=\sigma_1^2-\frac{\sigma_1^4}{\sigma_1^2+\sigma_2^2} 
 $
 </center>
@@ -71,10 +68,7 @@ $
 
 <center>
 $
-\mu'=\mu_1+K(\mu_2-\mu_1)
-$
-
-$
+\mu'=\mu_1+K(\mu_2-\mu_1) \\
 {\sigma'}^2=\sigma_1^2-K\sigma_1^2
 $
 </center>
@@ -83,14 +77,8 @@ $
 
 <center>
 $
-\pmb{K}=\Sigma_1(\Sigma_1+\Sigma_2)^{-1}
-$
-
-$
-\pmb{\mu'}=\mu_1+K(\mu_2-\mu_1)
-$
-
-$
+\pmb{K}=\Sigma_1(\Sigma_1+\Sigma_2)^{-1} \\
+\pmb{\mu'}=\mu_1+K(\mu_2-\mu_1) \\
 \Sigma'=\Sigma_1-\pmb{K}\Sigma_1
 $
 </center>
