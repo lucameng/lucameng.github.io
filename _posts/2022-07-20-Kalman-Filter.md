@@ -145,10 +145,19 @@ $
 
 <center>
 $
-\pmb{X_t}=\begin{array}p\\
-          v \end{array}
-         =\begin{array}x_t\\
-          \dot{x_t} \end{array}
+\pmb{X_t}=\begin{matrix}p\\
+          v \end{matrix}
+         =\begin{matrix}x_t\\
+          \dot{x_t} \end{matrix}
+$
+</center>
+
+但这个状态不一定准确，其不确定性用**协方差矩阵**表示（[为什么？](https://blog.csdn.net/linxigjs/article/details/93064354)）：
+
+<center>
+$
+\pmb{P_t}=\begin{matrix}\Sigma_{pp} \Sigma_{pv}\\
+          \Sigma_{vp} \Sigma_{vv} \end{matrix}
 $
 </center>
 
