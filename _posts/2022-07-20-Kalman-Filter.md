@@ -17,6 +17,7 @@ modified: 2022-07-20
 - [Multi-dimention](#multi-dimention)
   - [Prediction](#prediction)
   - [Correction](#correction)
+- [To sum up](#to-sum-up)
 
 ---
 
@@ -267,7 +268,7 @@ $
 ---
 小结：
 
-- **新的最优估计**是之前最优估计的**预测**加上已知的**外界影响**的修正。  
+- **新的最优估计**是**之前最优估计**的**预测**加上已知的**外界影响**的修正。  
 - **新的不确定度**是**预测的不确定度**加上**环境的不确定度**。  
 
 
@@ -295,8 +296,15 @@ $
 
 目前，我们得到了$$ \vec{x} $$方向上的两个分布：
 
-- **预测**值$$ \pmb{X} $$的分布$$ N(\vec{x};\mu_1,\sigma_1^2) $$  
-- **测量**值$$ \pmb{Z} $$的分布$$ N(\vec{x};\mu_2,\sigma_2^2) $$
+- **预测（Prediction）**值$$ \pmb{X} $$的分布$$ N(\vec{x};\mu_1,\sigma_1^2) $$  
+- **测量（Measurement）**值$$ \pmb{Z} $$的分布$$ N(\vec{x};\mu_2,\sigma_2^2) $$
+
+
+<figure>
+	<center>
+         <a href="/images/KF/kf2.png"><img src="/images/KF/kf2.png" alt=""></a>
+	</center>
+</figure>
 
 在修正过程中，这两个分布融合得到$$ \pmb{X'} $$，记其分布为$$ N_{fused} $$，借助公式$\eqref{eq3}$，有：
 
@@ -306,14 +314,13 @@ $
 $
 </center>
 
-
 <center>
 $
 \pmb{HP'H^T} = \pmb{HPH^T} - \pmb{K}\pmb{HPH^T} 
 $
 </center>
 
-其中:
+其中，
 
 <center>
 $
@@ -321,8 +328,66 @@ $
 $
 </center>
 
+将第二个式子左乘$$ H^{-1} $$；第三个式子左乘$$ H^{-1} $$，右乘$$ (H^T)^{-1} $$，得到：
 
+<center>
+$
+\pmb{X'} = \pmb{X} + \pmb{K'} (\pmb{Z}-\pmb{HX}) 
+$
+</center>
 
+<center>
+$
+\pmb{P'} = \pmb{P} - \pmb{K'}\pmb{HP} 
+$
+</center>
+
+其中，
+
+<center>
+$
+\pmb{K'} = \pmb{PH^T(HPT^T+R)^{-1}}
+$
+</center>
+
+---
+## To sum up
+
+整个过程中，卡尔曼滤波共有5个公式，分别为**预测过程**的2个公式和**测量修正过程**的3个公式：
+
+- 预测过程：
+
+<center>
+$
+\pmb{\hat{Z}} = \pmb{H} \pmb{\hat{X}}  
+$
+</center>
+
+<center>
+$
+\pmb{\Sigma} = \pmb{H} \pmb{P}  \pmb{H}^T 
+$
+</center>
+
+- 测量修正过程
+
+<center>
+$
+\pmb{K'} = \pmb{PH^T(HPT^T+R)^{-1}}
+$
+</center>
+
+<center>
+$
+\pmb{X'} = \pmb{X} + \pmb{K'} (\pmb{Z}-\pmb{HX}) 
+$
+</center>
+
+<center>
+$
+\pmb{P'} = \pmb{P} - \pmb{K'}\pmb{HP} 
+$
+</center>
 
 ---
 [^1]: Gaussian Distribution，又称正态分布
