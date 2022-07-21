@@ -18,6 +18,7 @@ modified: 2022-07-20
   - [Prediction](#prediction)
   - [Correction](#correction)
 - [To sum up](#to-sum-up)
+- [What's more?](#whats-more)
 
 ---
 
@@ -249,7 +250,7 @@ $
 
 <center>
 $
-= \pmb{F} \pmb{\hat{X}_{t-1}} + \pmb{B}\pmb{u_{t-1}}
+= \pmb{F} \pmb{\hat{X}_{t-1}} + \pmb{B}\pmb{u_{t-1}} \quad
 $
 </center>
 
@@ -257,7 +258,7 @@ $
 
 <center>
 $
-\pmb{\hat{X}_{t}} = \pmb{F} \pmb{\hat{X}_{t-1}} + \pmb{B} \ddot{x_{t-1}} 
+\pmb{\hat{X}_{t}} = \pmb{F} \pmb{\hat{X}_{t-1}} + \pmb{B} \ddot{x}_{t-1} 
 $
 </center>
 
@@ -296,7 +297,7 @@ $
 $
 </center>
 
-目前，我们得到了$$ \vec{x} $$方向（一维）上的两个分布：
+目前，我们得到了$$ \vec{x} $$方向(1-D)上的两个分布：
 
 - **预测（Prediction）**值$$ \pmb{X} $$的分布$$ N(\vec{x};\mu_1,\sigma_1^2) $$  
 - **测量（Measurement）**值$$ \pmb{Z} $$的分布$$ N(\vec{x};\mu_2,\sigma_2^2) $$
@@ -318,14 +319,14 @@ $
 
 扩展到二维情况，由公式$\eqref{eq4}$，我们得到：
 
-- **预测（Prediction）**值$$ \pmb{X} $$对应的均值和协方差为$$ (\mu_1,\Sigma_1)=(\pmb{H \hat{X}},\pmb{HPH^T}) $$  
-- **测量（Measurement）**值$$ \pmb{Z} $$对应的均值和协方差为$$ (\mu_2,\Sigma_2)=(\pmb{Z},\pmb{R}) $$ 
+- **预测（Prediction）**值$$ \pmb{X} $$对应的均值和协方差为$$ (\pmb{\mu_1},\Sigma_1)=(\pmb{H \hat{X}},\pmb{HPH^T}) $$  
+- **测量（Measurement）**值$$ \pmb{Z} $$对应的均值和协方差为$$ (\pmb{\mu_2},\Sigma_2)=(\pmb{Z},\pmb{R}) $$ 
 
 借助公式$\eqref{eq3}$，有：
 
 <center>
 $
-\pmb{HX'} = \pmb{HX} + \pmb{K} (Z-\pmb{HX}) 
+\pmb{HX'} = \pmb{HX} + \pmb{K} (\pmb{Z}-\pmb{HX}) 
 $
 </center>
 
@@ -343,7 +344,7 @@ $
 $
 </center>
 
-将第二个式子左乘$$ H^{-1} $$；第三个式子左乘$$ H^{-1} $$，右乘$$ (H^T)^{-1} $$，得到：
+将第二个式子左乘$$ \pmb{H^{-1}} $$；第三个式子左乘$$ \pmb{H^{-1}} $$，右乘$$ \pmb{(H^T)^{-1}} $$，得到：
 
 <center>
 $
@@ -364,6 +365,8 @@ $
 \pmb{K'} = \pmb{PH^T(HPT^T+R)^{-1}}
 $
 </center>
+
+\pmb{X'}和\pmb{P'}就是经过测量、更新之后的**状态**和**不确定性**，至此，卡尔曼滤波的一步就完成了。以此为基础进行不断迭代，就用卡尔曼滤波实现了系统的**定位**
 
 ---
 ## To sum up
@@ -404,6 +407,12 @@ $
 \pmb{P'} = \pmb{P} - \pmb{K'}\pmb{HP} 
 $
 </center>
+
+## What's more?
+
+如果考虑系统的运动是非线性的情况呢？这时我们不能再简单地用$$x=vt$$来描述系统的运动。自然地，引出非线性系统下的卡尔曼滤波————**扩展卡尔曼滤波(EKF)**。
+
+此外，还有卡尔曼滤波的诸多变体，如UKF、CKF、QKF、MSCKF等等，基于扩展卡尔曼滤波的SLAM模型EKFSLAM......
 
 ---
 [^1]: Gaussian Distribution，又称正态分布
