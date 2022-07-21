@@ -15,6 +15,7 @@ modified: 2022-07-20
 - [As an example](#as-an-example)
 - [One steps further](#one-steps-further)
 - [Multi-dimention](#multi-dimention)
+  - [Prediction](#prediction)
 
 ---
 
@@ -141,14 +142,14 @@ $
 
 考虑一个**二维状态**的例子：
 
-已知当前状态$$ \pmb{X_t} $$，其表示为一个拥有2个分量的向量，分量分别表示**位置信息**和**速度信息**，即：
+已知小车当前状态$$ \pmb{X_t} $$，其表示为一个拥有2个分量的向量，分量分别表示**位置信息**和**速度信息**，即：
 
 <center>
 $
-\pmb{X_t}=\begin{matrix}p\\
-          v \end{matrix}
-         =\begin{matrix}x_t\\
-          \dot{x_t} \end{matrix}
+\pmb{X_t}=\begin{bmatrix}p\\
+          v \end{batrix}
+         =\begin{bmatrix}x_t\\
+          \dot{x_t} \end{bmatrix}
 $
 </center>
 
@@ -156,8 +157,24 @@ $
 
 <center>
 $
-\pmb{P_t}=\begin{matrix}\Sigma_{pp} \Sigma_{pv}\\
-          \Sigma_{vp} \Sigma_{vv} \end{matrix}
+\pmb{P_t}=\begin{bmatrix}\Sigma_{pp}&\Sigma_{pv}\\
+          \Sigma_{vp}&\Sigma_{vv} \end{bmatrix}
+$
+</center>
+
+### Prediction
+
+将**加速度**等视作外部因素，只考虑小车本身的运动，有：
+
+<center>
+$
+\pmb{P_{t+1}}=\pmb{P_{t}}+\Delta v_{t}
+$
+</center>
+
+<center>
+$
+\pmb{v_{t+1}}=&ensp v_{t}
 $
 </center>
 
