@@ -241,7 +241,7 @@ $
 <center>
 $
 \pmb{\hat{X}_{t}} = \pmb{F} \pmb{\hat{X}_{t-1}} + \begin{bmatrix} \frac{1}{2} \Delta t^2\\
-          \Delta t \end{bmatrix} \ddot{x_{t-1}} 
+          \Delta t \end{bmatrix} \ddot{x}_{t-1} 
 $
 </center>
 
@@ -276,7 +276,7 @@ $
 
 ### Correction
 
-通过**预测过程**我们已经得到了$$ \pmb{X_{t}} $$和$$ \pmb{P_{t}} $$。下一步我们要通过**观测**到的测量值$$ \pmb{Z_{k+1}} $$对$$ \pmb{X_{t}} $$和$$ \pmb{P_{t}} $$进行**修正更新**。由于这个过程不再涉及$$ t $$时刻的状态和误差，因此将$$ \pmb{X_{t}} $$、$$ \pmb{P_{t}} $$和$$ \pmb{Z_{t}} $$省略为$$ \pmb{X} $$、$$ \pmb{P} $$和$$ \pmb{Z} $$，以方便阅读。
+通过**预测过程**我们已经得到了$$ \pmb{X_{t}} $$和$$ \pmb{P_{t}} $$。下一步我们要通过**观测**到的测量值$$ \pmb{Z_{t}} $$对$$ \pmb{X_{t}} $$和$$ \pmb{P_{t}} $$进行**修正更新**。由于这个过程不再涉及$$ t-1 $$时刻的状态和误差，因此将$$ \pmb{X_{t}} $$、$$ \pmb{P_{t}} $$和$$ \pmb{Z_{t}} $$省略为$$ \pmb{X} $$、$$ \pmb{P} $$和$$ \pmb{Z} $$，以方便阅读。
 
 由于传感器观测得到的数据信息$$ \pmb{Z} $$与$$ \pmb{X} $$的尺度不尽相同，因此我们需要一个转换矩阵$$ \pmb{H} $$将$$ \pmb{X} $$转换为$$ \pmb{Z} $$的尺度，即：
 
@@ -306,7 +306,15 @@ $
 	</center>
 </figure>
 
-在修正过程中，这两个分布融合得到$$ \pmb{X'} $$，记其分布为$$ N_{fused} $$，借助公式$\eqref{eq3}$，有：
+在修正过程中，这两个分布融合得到$$ \pmb{X'} $$，记其分布为$$ N_{fused} $$，由公式$\eqref{eq2}$得到：
+
+<center>
+$
+N_{fused}(\vec{x};\mu_{fused},\sigma_{fused}^2) = N(\vec{x};\mu_1,\sigma_1^2) \times N(\vec{x};\mu_2,\sigma_2^2)
+$
+</center>
+
+进一步，借助公式$\eqref{eq3}$，有：
 
 <center>
 $
