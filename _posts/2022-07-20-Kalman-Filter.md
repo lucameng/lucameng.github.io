@@ -16,6 +16,7 @@ modified: 2022-07-20
 - [One steps further](#one-steps-further)
 - [Multi-dimention](#multi-dimention)
   - [Prediction](#prediction)
+  - [Correction](#correction)
 
 ---
 
@@ -263,7 +264,11 @@ $
 $
 </center>
 
+---
 
+### Correction
+
+通过**预测过程**我们已经得到了$$ \pmb{X_{t+1}} $$和$$ \pmb{P_{t+1}} $$。下一步我们要通过**观测**到的测量值$$ \pmb{Z_{k+1}} $$对$$ \pmb{X_{t+1}} $$和$$ \pmb{P_{t+1}} $$进行**修正更新**。由于这个过程不再涉及$$ t $$时刻的状态和误差，因此将$$ \pmb{X_{t+1}} $$、$$ \pmb{P_{t+1}} $$和$$ \pmb{P_{t+1}} $$省略为$$ \pmb{X} $$、$$ \pmb{P} $$和$$ \pmb{P} $$，以方便阅读。
 
 
 ---
