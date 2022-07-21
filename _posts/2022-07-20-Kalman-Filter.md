@@ -53,7 +53,7 @@ modified: 2022-07-20
 这是一个**预测过程**，求预测位置符合**全概率法则**，即：
 
 <center>
-$ N(\mu',{\sigma'}^2)=N(\mu_1+\mu_2,\sigma_1^2+\sigma_2^2) $
+$ N(\mu',{\sigma'}^2)=N(\mu_1+\mu_2,\sigma_1^2+\sigma_2^2) \tag{1} \label{eq1}$
 </center>
 
 ---
@@ -70,7 +70,7 @@ $ N(\mu',{\sigma'}^2)=N(\mu_1+\mu_2,\sigma_1^2+\sigma_2^2) $
 这是一个**感知过程**，其符合**贝叶斯法则**，最终分布是两个分布相乘，即：
 
 <center>
-$ N(\mu',{\sigma'}^2)=N(\mu',\sigma_1^2) \times N(\mu',\sigma_2^2)=N(\frac{\mu_1\sigma_2^2+\mu_2\sigma_1^2}{\sigma_1^2+\sigma_2^2}，\frac{\sigma_1^2\sigma_2^2}{\sigma_1^2+\sigma_2^2}) $
+$ N(\mu',{\sigma'}^2)=N(\mu',\sigma_1^2) \times N(\mu',\sigma_2^2)=N(\frac{\mu_1\sigma_2^2+\mu_2\sigma_1^2}{\sigma_1^2+\sigma_2^2}，\frac{\sigma_1^2\sigma_2^2}{\sigma_1^2+\sigma_2^2}) \tag{2} \label{eq2}$
 </center>
 
 ---
@@ -125,7 +125,7 @@ $
 
 <center>
 $
-\pmb{\mu'}=\mu_1+\pmb{K}(\mu_2-\mu_1) 
+\pmb{\mu'}=\mu_1+\pmb{K}(\mu_2-\mu_1) \tag{3} \label{eq3}
 $
 </center>
 
@@ -201,7 +201,7 @@ $
 
 <center>
 $
-Cov(\pmb{A}x)=\pmb{A}\Sigma\pmb{A}^T
+Cov(\pmb{A}x)=\pmb{A}\Sigma\pmb{A}^T \tag{4} \label{eq4}
 $
 </center>
 
@@ -276,6 +276,30 @@ $
 ### Correction
 
 通过**预测过程**我们已经得到了$$ \pmb{X_{t+1}} $$和$$ \pmb{P_{t+1}} $$。下一步我们要通过**观测**到的测量值$$ \pmb{Z_{k+1}} $$对$$ \pmb{X_{t+1}} $$和$$ \pmb{P_{t+1}} $$进行**修正更新**。由于这个过程不再涉及$$ t $$时刻的状态和误差，因此将$$ \pmb{X_{t+1}} $$、$$ \pmb{P_{t+1}} $$和$$ \pmb{Z_{t+1}} $$省略为$$ \pmb{X} $$、$$ \pmb{P} $$和$$ \pmb{Z} $$，以方便阅读。
+
+由于传感器观测得到的数据信息$$ \pmb{Z} $$与$$ \pmb{X} $$的尺度不尽相同，因此我们需要一个转换矩阵$$ \pmb{H} $$将$$ \pmb{X} $$转换为$$ \pmb{Z} $$的尺度，即：
+
+<center>
+$
+\pmb{\hat{Z}} = \pmb{H} \pmb{\hat{X}}  
+$
+</center>
+
+借助$\eqref{eq4}$，有：
+
+<center>
+$
+\pmb{\Sigma} = \pmb{H} \pmb{P}  \pmb{h}^T 
+$
+</center>
+
+目前，我们得到了$$ \uparrow{x} $$方向上的两个分布：
+
+- **预测**值$$ \pmb{X} $$的分布$$ N(\uparrow{x};\mu_1,\sigma_1^2) $$  
+- **测量**值$$ \pmb{Z} $$的分布$$ N(\uparrow{x};\mu_2,\sigma_2^2) $$
+
+在修正过程中，这两个分布融合成新的分布$$ N_{fused} $$：
+
 
 
 
