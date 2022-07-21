@@ -10,6 +10,28 @@ modified: 2022-07-20
 
 
 {% raw %}
+**Table of Contents**
+- [What is Kalman Filter(KF)?](#what-is-kalman-filterkf)
+- [As an example](#as-an-example)
+- [One steps further](#one-steps-further)
+
+---
+
+## What is Kalman Filter(KF)?
+
+<figure>
+	<center>
+         <a href="/images/KF/kf1.png"><img src="/images/KF/kf1.png" alt=""></a>
+	</center>
+</figure>
+
+对于某一个系统，假定知道当前状态$$ X_t $$，存在以下两个问题：
+
+- 经过时间$$ \delta t $$后，下一个状态$$ X_{t+1} $$如何求出？  
+- 假定已求出$$ X_{t+1} $$，同时在$$ t+1 $$时刻接收到传感器的非直接信息$$ Z_{t+1} $$，如何利用$$ Z_{t+1} $$来对状态$$ X_{t+1} $$进行更正呢？
+
+---
+
 ## As an example
 
 以**一维运动**为例，假入有一个小车，开始位于$$ x=\mu_1 $$的位置，但是由于误差的存在，其真实分布是高斯分布[^1]，其方差是$$ \sigma_{1}^{2} $$，即其原始位置分布是$$ N(\mu_1,\sigma_{1}^{2}) $$，当该小车经过运动，到达终点位置，但是由于运动也是不准确的（打滑等），其**移动过程**的分布也是高斯分布，移动分布为$$ N(\mu_2,\sigma_{2}^{2}) $$，那么其最终的位置分布是多少呢？
@@ -43,7 +65,9 @@ $ N(\mu',{\sigma'}^2)=N(\mu_1+\mu_2,\sigma_1^2+\sigma_2^2) $
 $ N(\mu',{\sigma'}^2)=N(\mu',\sigma_1^2) \times N(\mu',\sigma_2^2)=N(\frac{\mu_1\sigma_2^2+\mu_2\sigma_1^2}{\sigma_1^2+\sigma_2^2}，\frac{\sigma_1^2\sigma_2^2}{\sigma_1^2+\sigma_2^2}) $
 </center>
 
-## One Steps Further
+---
+
+## One steps further
 
 下面将**感知过程**中的利用到的贝叶斯法则扩展到**多维**，这也是卡尔曼滤波的**核心**。
 
@@ -102,6 +126,10 @@ $
 \Sigma'=\Sigma_1-\pmb{K}\Sigma_1
 $
 </center>
+
+该公式会在卡尔曼滤波的**更新过程**中用到。
+
+---
 
 
 
