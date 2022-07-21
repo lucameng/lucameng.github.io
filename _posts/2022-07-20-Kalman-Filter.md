@@ -168,13 +168,22 @@ $
 
 <center>
 $
-x_{t+1}=x_{t}+\Delta \dot{x_{t}}
+x_{t+1}=x_{t}+\Delta t \dot{x_{t}}
 $
 </center>
 
 <center>
 $
-\dot{x_{t+1}}=\qquad \quad \dot{v_{t}}
+\dot{x_{t+1}}=\qquad \quad \dot{x_{t}}
+$
+</center>
+
+用矩阵表示：
+
+<center>
+$
+\pmb{\hat{X_{t+1}}}=\begin{bmatrix} 1 &\Delta t\\
+          0 &v_{t} \end{bmatrix} \pmb{\hat{X_{t}}}
 $
 </center>
 
