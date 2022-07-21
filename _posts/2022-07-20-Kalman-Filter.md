@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Introduction to Kalman Filter
-description: "什么是卡尔曼滤波"
+description: "卡尔曼滤波是个啥？"
 tags: [自动驾驶]
 image:
   feature: abstract-11.jpg
-modified: 2022-07-20
+modified: 2022-07-21
 ---
 
 
