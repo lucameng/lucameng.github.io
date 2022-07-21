@@ -285,20 +285,41 @@ $
 $
 </center>
 
-借助$\eqref{eq4}$，有：
+借助公式$\eqref{eq4}$，有：
 
 <center>
 $
-\pmb{\Sigma} = \pmb{H} \pmb{P}  \pmb{h}^T 
+\pmb{\Sigma} = \pmb{H} \pmb{P}  \pmb{H}^T 
 $
 </center>
 
-目前，我们得到了$$ \uparrow{x} $$方向上的两个分布：
+目前，我们得到了$$ \vec{x} $$方向上的两个分布：
 
-- **预测**值$$ \pmb{X} $$的分布$$ N(\uparrow{x};\mu_1,\sigma_1^2) $$  
-- **测量**值$$ \pmb{Z} $$的分布$$ N(\uparrow{x};\mu_2,\sigma_2^2) $$
+- **预测**值$$ \pmb{X} $$的分布$$ N(\vec{x};\mu_1,\sigma_1^2) $$  
+- **测量**值$$ \pmb{Z} $$的分布$$ N(\vec{x};\mu_2,\sigma_2^2) $$
 
-在修正过程中，这两个分布融合成新的分布$$ N_{fused} $$：
+在修正过程中，这两个分布融合得到$$ \pmb{X'} $$，记其分布为$$ N_{fused} $$，借助公式$\eqref{eq3}$，有：
+
+<center>
+$
+\pmb{HX'} = \pmb{HX} + \pmb{K} (Z-\pmb{HX}) 
+$
+</center>
+
+
+<center>
+$
+\pmb{HP'H^T} = \pmb{HPH^T} - \pmb{K}\pmb{HPH^T} 
+$
+</center>
+
+其中:
+
+<center>
+$
+\pmb{K} = \pmb{HPH^T(HPT^T+R)^{-1}}
+$
+</center>
 
 
 
