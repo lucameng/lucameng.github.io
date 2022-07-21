@@ -184,7 +184,7 @@ $
 $
 \pmb{\hat{X}_{t+1}}=\begin{bmatrix} 1 &\Delta t\\
           0 & 1 \end{bmatrix} \pmb{\hat{X}_{t}} 
-          =\pmb{F_{t+1}} \pmb{\hat{X}_{t}}
+          =\pmb{F} \pmb{\hat{X}_{t}}
 $
 </center>
 
@@ -206,13 +206,13 @@ $
 
 <center>
 $
-\pmb{\hat{X}_{t+1}} = \pmb{F_{t+1}} \pmb{\hat{X}_{t}}
+\pmb{\hat{X}_{t+1}} = \pmb{F} \pmb{\hat{X}_{t}}
 $
 </center>
 
 <center>
 $
-\pmb{P_{t+1}} = \pmb{F_{t+1}} \pmb{P_{t}}\pmb{F_{t+1}}^T
+\pmb{P_{t+1}} = \pmb{F} \pmb{P_{t}}\pmb{F}^T
 $
 </center>
 
@@ -230,12 +230,28 @@ $
 $
 </center>
 
+写成矩阵形式：
+
 <center>
 $
-\pmb{\hat{X}_{t+1}} = \pmb{F_{t+1}} \pmb{\hat{X}_{t}} + \begin{bmatrix} \frac{1}{2} \Delta t^2\\
-          \Delta t \end{bmatrix} \ddot{x_t} = \pmb{F_{t+1}} \pmb{\hat{X}_{t}} + \pmb{B_{t+1}}\pmb{u_t}
+\pmb{\hat{X}_{t+1}} = \pmb{F} \pmb{\hat{X}_{t}} + \begin{bmatrix} \frac{1}{2} \Delta t^2\\
+          \Delta t \end{bmatrix} \ddot{x_t} 
 $
 </center>
+
+<center>
+$
+\qquad \qquad = \pmb{F} \pmb{\hat{X}_{t}} + \pmb{B}\pmb{u_t}
+$
+</center>
+
+同时，还存在环境误差，以$$ \pmb{Q_t} $$表示。最终预测的形式呈现为：
+
+
+
+
+
+
 
 ---
 [^1]: Gaussian Distribution，又称正态分布
