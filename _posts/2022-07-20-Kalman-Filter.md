@@ -71,7 +71,7 @@ $ N(\mu',{\sigma'}^2)=N(\mu_1+\mu_2,\sigma_1^2+\sigma_2^2) \tag{1} \label{eq1}$
 这是一个**感知过程**，其符合**贝叶斯法则**，最终分布是两个分布相乘，即：
 
 <center>
-$ N(\mu',{\sigma'}^2)=N(\mu',\sigma_1^2) \times N(\mu',\sigma_2^2)=N(\frac{\mu_1\sigma_2^2+\mu_2\sigma_1^2}{\sigma_1^2+\sigma_2^2}，\frac{\sigma_1^2\sigma_2^2}{\sigma_1^2+\sigma_2^2}) \tag{2} \label{eq2}$
+$ N(\mu',{\sigma'}^2)=N(\mu_1,\sigma_1^2) \times N(\mu_2,\sigma_2^2)=N(\frac{\mu_1\sigma_2^2+\mu_2\sigma_1^2}{\sigma_1^2+\sigma_2^2}，\frac{\sigma_1^2\sigma_2^2}{\sigma_1^2+\sigma_2^2}) \tag{2} \label{eq2}$
 </center>
 
 ---
@@ -144,7 +144,7 @@ $
 
 考虑一个**二维状态**的例子：
 
-已知小车在$$ t $$时刻的状态$$ \pmb{X_{t-1}} $$，其表示为一个拥有2个分量的向量，分量分别表示**位置信息**和**速度信息**，即：
+已知小车在$$ t $$时刻的状态$$ \pmb{X_{t}} $$，其表示为一个拥有2个分量的向量，分量分别表示**位置信息**和**速度信息**，即：
 
 <center>
 $
@@ -178,7 +178,7 @@ $
 
 <center>
 $
-\dot{x}_{t}=\qquad \ \dot{x}_{t-1} \quad
+\dot{x}_{t}=\qquad \quad  \dot{x}_{t-1} \quad
 $
 </center>
 
@@ -234,7 +234,7 @@ $
 
 <center>
 $
-\dot{x}_{t}=\qquad \dot{x}_{t-1} \quad+\quad \ddot{x_{t-1}} \Delta t
+\dot{x}_{t}=\qquad \quad \dot{x}_{t-1} \quad+\quad \ddot{x_{t-1}} \Delta t
 $
 </center>
 
@@ -385,7 +385,6 @@ $
 </center>
 
 - 更新过程：
-
 
 
 <center>
