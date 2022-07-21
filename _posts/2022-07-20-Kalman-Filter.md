@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Introduction to Kalman Filter
-description: "深入浅出学习卡尔曼滤波"
+description: "深入理解卡尔曼滤波"
 tags: [自动驾驶]
 image:
   feature: abstract-11.jpg
@@ -77,8 +77,18 @@ $
 
 <center>
 $
-\pmb{K}=\Sigma_1(\Sigma_1+\Sigma_2)^{-1} \\
-\pmb{\mu'}=\mu_1+K(\mu_2-\mu_1) \\
+\pmb{K}=\Sigma_1(\Sigma_1+\Sigma_2)^{-1}
+$
+</center>
+
+<center>
+$
+\pmb{\mu'}=\mu_1+K(\mu_2-\mu_1) 
+$
+</center>
+
+<center>
+$
 \Sigma'=\Sigma_1-\pmb{K}\Sigma_1
 $
 </center>
