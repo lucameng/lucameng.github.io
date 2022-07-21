@@ -174,7 +174,7 @@ $
 
 <center>
 $
-\pmb{v_{t+1}}=&ensp v_{t}
+\pmb{v_{t+1}}=\qquad v_{t}
 $
 </center>
 
