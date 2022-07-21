@@ -183,8 +183,22 @@ $
 <center>
 $
 \pmb{\hat{X}_{t+1}}=\begin{bmatrix} 1 &\Delta t\\
-          0 &v_{t} \end{bmatrix} \pmb{\hat{X}_{t}} \\
+          0 & 1 \end{bmatrix} \pmb{\hat{X}_{t}} 
           =\pmb{F_{t+1}} \pmb{\hat{X}_{t}}
+$
+</center>
+
+在**状态变化**的过程中引入了新的**不确定性**，根据协方差的乘积公式：
+
+<center>
+$
+Cov(x)=\Sigma
+$
+</center>
+
+<center>
+$
+Cov(\pmb{A}x)=\pmb{A}\Sigma\pmb{A}^T
 $
 </center>
 
