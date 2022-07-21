@@ -367,13 +367,13 @@ $
 
 <center>
 $
-\pmb{\hat{X}_{t}} = \pmb{F} \pmb{\hat{X}_{t-1}} + \pmb{B} \ddot{x_{t-1}} 
+\pmb{\hat{X}_{t}} = \pmb{F} \pmb{\hat{X}_{t-1}} + \pmb{B} \pmb{u_{t-1}}
 $
 </center>
 
 <center>
 $
-\pmb{P_{t}} = \pmb{F} \pmb{P_{t-1}}\pmb{F}^T + \pmb{Q}
+\pmb{P_{t}} = \pmb{F} \pmb{P_{t-1}}\pmb{F}^T + \pmb{Q_{t-1}}
 $
 </center>
 
