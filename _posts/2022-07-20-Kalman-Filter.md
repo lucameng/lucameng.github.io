@@ -192,6 +192,8 @@ $
 $
 </center>
 
+> 注：考虑$$ \Delta t $$为常量，此时状态转换矩阵$$ F_t $$不变，故简写为$$ F $$，下同。
+
 在**状态变化**的过程中引入了新的**不确定性**，根据协方差的乘积公式：
 
 <center>
@@ -294,7 +296,7 @@ $
 $
 </center>
 
-目前，我们得到了$$ \vec{x} $$方向上的两个分布：
+目前，我们得到了$$ \vec{x} $$方向（一维）上的两个分布：
 
 - **预测（Prediction）**值$$ \pmb{X} $$的分布$$ N(\vec{x};\mu_1,\sigma_1^2) $$  
 - **测量（Measurement）**值$$ \pmb{Z} $$的分布$$ N(\vec{x};\mu_2,\sigma_2^2) $$
@@ -314,7 +316,12 @@ N_{fused}(\vec{x};\mu_{fused},\sigma_{fused}^2) = N(\vec{x};\mu_1,\sigma_1^2) \t
 $
 </center>
 
-进一步，借助公式$\eqref{eq3}$，有：
+扩展到二维情况，由公式$\eqref{eq4}$，我们得到：
+
+- **预测（Prediction）**值$$ \pmb{X} $$对应的均值和协方差为$$ (\mu_1,\Sigma_1)=(\pmb{H \hat{X}},\pmb{HPH^T}) $$  
+- **测量（Measurement）**值$$ \pmb{Z} $$对应的均值和协方差为$$ (\mu_2,\Sigma_2)=(\pmb{Z},\pmb{R}) $$ 
+
+借助公式$\eqref{eq3}$，有：
 
 <center>
 $
@@ -368,7 +375,7 @@ $
 <center>
 $
 \pmb{\hat{X}_{t}} = \pmb{F} \pmb{\hat{X}_{t-1}} + \pmb{B} \pmb{u_{t-1}}
-$
+$     
 </center>
 
 <center>
@@ -379,7 +386,7 @@ $
 
 - 更新过程：
 
-    > 注：下标均为$$t$$
+
 
 <center>
 $
