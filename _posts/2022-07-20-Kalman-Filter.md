@@ -178,7 +178,7 @@ $
 
 <center>
 $
-\dot{x}_{t}=\qquad {\}\dot{x}_{t-1} \quad
+\dot{x}_{t}=\qquad \ \dot{x}_{t-1} \quad
 $
 </center>
 
@@ -222,7 +222,7 @@ $
 
 ---
 
-考虑外部因素$$ \pmb{u_{t-1}} $$，如引入**加速度** $$a_{t-1} = \ddot{x_{t-1}}$$:
+考虑外部因素$$ \pmb{u_{t-1}} $$，如引入**加速度** $$a_{t-1} = \ddot{x}_{t-1}$$:
 
 <center>
 $
