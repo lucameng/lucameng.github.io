@@ -174,7 +174,7 @@ $
 
 <center>
 $
-\dot{x}_{t+1}=\qquad \dot{x}_{t}
+\dot{x}_{t+1}=\qquad \dot{x}_{t} \quad
 $
 </center>
 
@@ -216,7 +216,7 @@ $
 $
 </center>
 
-- 考虑外部因素$$ \pmb{u_k} $$，如引入**加速度** $$a_t = \ddot{x_t}$$:
+- 考虑外部因素$$ \pmb{u_t} $$，如引入**加速度** $$a_t = \ddot{x_t}$$:
 
 <center>
 $
@@ -226,14 +226,14 @@ $
 
 <center>
 $
-\dot{x}_{t+1}=\qquad \dot{x}_{t} + \ddot{x_t} \Delta t
+\dot{x}_{t+1}=\qquad \dot{x}_{t} + \ddot{x_t} \Delta t \quad
 $
 </center>
 
 <center>
 $
 \pmb{\hat{X}_{t+1}} = \pmb{F_{t+1}} \pmb{\hat{X}_{t}} + \begin{bmatrix} \frac{1}{2} \Delta t^2\\
-          \Delta t \end{bmatrix} \ddot{x_t}
+          \Delta t \end{bmatrix} \ddot{x_t} = \pmb{F_{t+1}} \pmb{\hat{X}_{t}} + \pmb{B_{t+1}}\pmb{u_t}
 $
 </center>
 
