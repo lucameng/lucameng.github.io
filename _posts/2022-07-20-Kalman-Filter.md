@@ -29,10 +29,10 @@ modified: 2022-07-20
 	</center>
 </figure>
 
-对于某一个系统，假定知道当前状态$$ X_t $$，存在以下两个问题：
+对于某一个系统，假定知道当前状态$$ X_{t-1} $$，存在以下两个问题：
 
-- 经过时间$$ \Delta t $$后，下一个状态$$ X_{t+1} $$如何求出？  
-- 假定已求出$$ X_{t+1} $$，同时在$$ t+1 $$时刻接收到传感器的非直接信息$$ Z_{t+1} $$，如何利用$$ Z_{t+1} $$来对状态$$ X_{t+1} $$进行修正呢？
+- 经过时间$$ \Delta t $$后，下一个状态$$ X_{t} $$如何求出？  
+- 假定已求出$$ X_{t} $$，同时在$$ t $$时刻接收到传感器的非直接信息$$ Z_{t} $$，如何利用$$ Z_{t} $$来对状态$$ X_{t} $$进行修正呢？
 
 以上两个问题就是卡尔曼滤波要解决的，可以简要概括如下：
 
@@ -144,14 +144,14 @@ $
 
 考虑一个**二维状态**的例子：
 
-已知小车当前状态$$ \pmb{X_t} $$，其表示为一个拥有2个分量的向量，分量分别表示**位置信息**和**速度信息**，即：
+已知小车在$$ t $$时刻的状态$$ \pmb{X_{t-1} $$，其表示为一个拥有2个分量的向量，分量分别表示**位置信息**和**速度信息**，即：
 
 <center>
 $
-\pmb{X_t}=\begin{bmatrix}p\\
+\pmb{X_{t}}=\begin{bmatrix}p\\
           v \end{bmatrix}
-         =\begin{bmatrix}x_t\\
-          \dot{x_t} \end{bmatrix}
+         =\begin{bmatrix}x_{t}\\
+          \dot{x_{t}} \end{bmatrix}
 $
 </center>
 
@@ -159,7 +159,7 @@ $
 
 <center>
 $
-\pmb{P_t}=\begin{bmatrix}\Sigma_{pp}&\Sigma_{pv}\\
+\pmb{P_{t}}=\begin{bmatrix}\Sigma_{pp}&\Sigma_{pv}\\
           \Sigma_{vp}&\Sigma_{vv} \end{bmatrix}
 $
 </center>
@@ -172,13 +172,13 @@ $
 
 <center>
 $
-x_{t+1}=x_{t}+ \dot{x}_{t}\Delta t
+x_{t}=x_{t-1}+ \dot{x}_{t-1}\Delta t
 $
 </center>
 
 <center>
 $
-\dot{x}_{t+1}=\qquad \dot{x}_{t} \quad
+\dot{x}_{t}=\qquad \dot{x}_{t-1} \quad
 $
 </center>
 
@@ -186,9 +186,9 @@ $
 
 <center>
 $
-\pmb{\hat{X}_{t+1}}=\begin{bmatrix} 1 &\Delta t\\
-          0 & 1 \end{bmatrix} \pmb{\hat{X}_{t}} 
-          =\pmb{F} \pmb{\hat{X}_{t}}
+\pmb{\hat{X}_{t}}=\begin{bmatrix} 1 &\Delta t\\
+          0 & 1 \end{bmatrix} \pmb{\hat{X}_{t-1}} 
+          =\pmb{F} \pmb{\hat{X}_{t-1}}
 $
 </center>
 
@@ -210,29 +210,29 @@ $
 
 <center>
 $
-\pmb{\hat{X}_{t+1}} = \pmb{F} \pmb{\hat{X}_{t}}
+\pmb{\hat{X}_{t}} = \pmb{F} \pmb{\hat{X}_{t-1}}
 $
 </center>
 
 <center>
 $
-\pmb{P_{t+1}} = \pmb{F} \pmb{P_{t}}\pmb{F}^T
+\pmb{P_{t}} = \pmb{F} \pmb{P_{t-1}}\pmb{F}^T
 $
 </center>
 
 ---
 
-考虑外部因素$$ \pmb{u_t} $$，如引入**加速度** $$a_t = \ddot{x_t}$$:
+考虑外部因素$$ \pmb{u_{t-1}} $$，如引入**加速度** $$a_{t-1} = \ddot{x_{t-1}}$$:
 
 <center>
 $
-x_{t+1}=x_{t}+ \dot{x}_{t}\Delta t + \frac{1}{2} \ddot{x_t} \Delta t^2
+x_{t}=x_{t-1}+ \dot{x}_{t-1}\Delta t + \frac{1}{2} \ddot{x_{t-1}} \Delta t^2
 $
 </center>
 
 <center>
 $
-\dot{x}_{t+1}=\qquad \dot{x}_{t} \quad+\quad \ddot{x_t} \Delta t
+\dot{x}_{t}=\qquad \dot{x}_{t-1} \quad+\quad \ddot{x_{t-1}} \Delta t
 $
 </center>
 
@@ -240,14 +240,14 @@ $
 
 <center>
 $
-\pmb{\hat{X}_{t+1}} = \pmb{F} \pmb{\hat{X}_{t}} + \begin{bmatrix} \frac{1}{2} \Delta t^2\\
-          \Delta t \end{bmatrix} \ddot{x_t} 
+\pmb{\hat{X}_{t}} = \pmb{F} \pmb{\hat{X}_{t-1}} + \begin{bmatrix} \frac{1}{2} \Delta t^2\\
+          \Delta t \end{bmatrix} \ddot{x_{t-1}} 
 $
 </center>
 
 <center>
 $
-= \pmb{F} \pmb{\hat{X}_{t}} + \pmb{B}\pmb{u_t}
+= \pmb{F} \pmb{\hat{X}_{t-1}} + \pmb{B}\pmb{u_{t-1}}
 $
 </center>
 
@@ -255,13 +255,13 @@ $
 
 <center>
 $
-\pmb{\hat{X}_{t+1}} = \pmb{F} \pmb{\hat{X}_{t}} + \pmb{B} \ddot{x_t} 
+\pmb{\hat{X}_{t}} = \pmb{F} \pmb{\hat{X}_{t-1}} + \pmb{B} \ddot{x_{t-1}} 
 $
 </center>
 
 <center>
 $
-\pmb{P_{t+1}} = \pmb{F} \pmb{P_{t}}\pmb{F}^T + \pmb{Q}
+\pmb{P_{t}} = \pmb{F} \pmb{P_{t-1}}\pmb{F}^T + \pmb{Q}
 $
 </center>
 
@@ -276,7 +276,7 @@ $
 
 ### Correction
 
-通过**预测过程**我们已经得到了$$ \pmb{X_{t+1}} $$和$$ \pmb{P_{t+1}} $$。下一步我们要通过**观测**到的测量值$$ \pmb{Z_{k+1}} $$对$$ \pmb{X_{t+1}} $$和$$ \pmb{P_{t+1}} $$进行**修正更新**。由于这个过程不再涉及$$ t $$时刻的状态和误差，因此将$$ \pmb{X_{t+1}} $$、$$ \pmb{P_{t+1}} $$和$$ \pmb{Z_{t+1}} $$省略为$$ \pmb{X} $$、$$ \pmb{P} $$和$$ \pmb{Z} $$，以方便阅读。
+通过**预测过程**我们已经得到了$$ \pmb{X_{t}} $$和$$ \pmb{P_{t}} $$。下一步我们要通过**观测**到的测量值$$ \pmb{Z_{k+1}} $$对$$ \pmb{X_{t}} $$和$$ \pmb{P_{t}} $$进行**修正更新**。由于这个过程不再涉及$$ t $$时刻的状态和误差，因此将$$ \pmb{X_{t}} $$、$$ \pmb{P_{t}} $$和$$ \pmb{Z_{t}} $$省略为$$ \pmb{X} $$、$$ \pmb{P} $$和$$ \pmb{Z} $$，以方便阅读。
 
 由于传感器观测得到的数据信息$$ \pmb{Z} $$与$$ \pmb{X} $$的尺度不尽相同，因此我们需要一个转换矩阵$$ \pmb{H} $$将$$ \pmb{X} $$转换为$$ \pmb{Z} $$的尺度，即：
 
@@ -359,17 +359,19 @@ $
 
 <center>
 $
-\pmb{\hat{X}_{t+1}} = \pmb{F} \pmb{\hat{X}_{t}} + \pmb{B} \ddot{x_t} 
+\pmb{\hat{X}_{t}} = \pmb{F} \pmb{\hat{X}_{t-1}} + \pmb{B} \ddot{x_{t-1}} 
 $
 </center>
 
 <center>
 $
-\pmb{P_{t+1}} = \pmb{F} \pmb{P_{t}}\pmb{F}^T + \pmb{Q}
+\pmb{P_{t}} = \pmb{F} \pmb{P_{t-1}}\pmb{F}^T + \pmb{Q}
 $
 </center>
 
-- 测量修正过程
+- 更新过程：
+
+    > 注：下标均为$$t$$
 
 <center>
 $
