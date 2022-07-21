@@ -79,6 +79,24 @@ $
 $
 </center>
 
+将该结果扩展到多维情况下，得到：
+
+<center>
+$
+\pmb{K}=\Sigma_1(\Sigma_1+\Sigma_2)^{-1}
+$
+
+$
+\pmb{\mu'}=\mu_1+K(\mu_2-\mu_1)
+$
+
+$
+\Sigma'=\Sigma_1-\pmb{K}\Sigma_1
+$
+</center>
+
+
+
 ---
 [^1]: Gaussian Distribution，又称正态分布
 
