@@ -247,8 +247,17 @@ $
 
 同时，还存在环境误差，以$$ \pmb{Q_t} $$表示。最终预测的形式呈现为：
 
+<center>
+$
+\pmb{\hat{X}_{t+1}} = \pmb{F} \pmb{\hat{X}_{t}} + \pmb{B} \ddot{x_t} 
+$
+</center>
 
-
+<center>
+$
+\pmb{P_{t+1}} = \pmb{F} \pmb{P_{t}}\pmb{F}^T + \pmb{Q_t}
+$
+</center>
 
 
 
