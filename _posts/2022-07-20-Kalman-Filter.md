@@ -134,7 +134,7 @@ $
 $
 </center>
 
-该公式会在卡尔曼滤波的**更新过程**中用到。
+该公式会在卡尔曼滤波的**修正更新过程**中用到。
 
 ---
 
@@ -230,7 +230,7 @@ $
 
 <center>
 $
-\dot{x}_{t+1}=\qquad \dot{x}_{t} +\qquad \ddot{x_t} \Delta t \qquad
+\dot{x}_{t+1}=\qquad \dot{x}_{t} +\qquad \ddot{x_t} \Delta t
 $
 </center>
 
