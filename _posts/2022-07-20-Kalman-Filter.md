@@ -164,7 +164,7 @@ $
 
 ### Prediction
 
-- 将**加速度**等视作外部因素，只考虑小车本身的运动，有：
+将**加速度**等视作外部因素，只考虑小车本身的运动，有：
 
 <center>
 $
@@ -216,7 +216,9 @@ $
 $
 </center>
 
-- 考虑外部因素$$ \pmb{u_t} $$，如引入**加速度** $$a_t = \ddot{x_t}$$:
+---
+
+考虑外部因素$$ \pmb{u_t} $$，如引入**加速度** $$a_t = \ddot{x_t}$$:
 
 <center>
 $
@@ -226,7 +228,7 @@ $
 
 <center>
 $
-\dot{x}_{t+1}=\qquad \dot{x}_{t} + \ddot{x_t} \Delta t \quad
+\dot{x}_{t+1}=\qquad \dot{x}_{t} + \ddot{x_t} \Delta t \qquad
 $
 </center>
 
@@ -241,7 +243,7 @@ $
 
 <center>
 $
-\qquad \qquad = \pmb{F} \pmb{\hat{X}_{t}} + \pmb{B}\pmb{u_t}
+\qquad = \pmb{F} \pmb{\hat{X}_{t}} + \pmb{B}\pmb{u_t}
 $
 </center>
 
