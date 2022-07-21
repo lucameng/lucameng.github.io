@@ -168,13 +168,13 @@ $
 
 <center>
 $
-x_{t+1}=x_{t}+\Delta t \dot{x_{t}}
+x_{t+1}=x_{t}+\Delta t \dot{x}_{t}
 $
 </center>
 
 <center>
 $
-\dot{x_{t+1}}=\qquad \quad \dot{x_{t}}
+\dot{x}_{t+1}=\qquad \quad \dot{x}_{t}
 $
 </center>
 
@@ -182,8 +182,9 @@ $
 
 <center>
 $
-\pmb{\hat{X_{t+1}}}=\begin{bmatrix} 1 &\Delta t\\
-          0 &v_{t} \end{bmatrix} \pmb{\hat{X_{t}}}
+\pmb{\hat{X}_{t+1}}=\begin{bmatrix} 1 &\Delta t\\
+          0 &v_{t} \end{bmatrix} \pmb{\hat{X}_{t}} \\
+          =\pmb{F_{t+1}} \pmb{\hat{X}_{t}}
 $
 </center>
 
