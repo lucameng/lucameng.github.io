@@ -40,8 +40,11 @@ $ N(\mu',{\sigma'}^2)=N(\mu_1+\mu_2,\sigma_1^2+\sigma_2^2) $
 这是一个**感知过程**，其符合**贝叶斯法则**，最终分布是两个分布相乘，即：
 
 <center>
-$ N(\mu',{\sigma'}^2)=N(\mu',\sigma_1^2) \times N(\mu',\sigma_2^2)=N(\mu_1+\mu_2,\sigma_1^2+\sigma_2^2) $
+$ N(\mu',{\sigma'}^2)=N(\mu',\sigma_1^2) \times N(\mu',\sigma_2^2)=N(\frac{\mu_1\sigma_2^2+\mu_2\sigma_1^2}{\sigma_1^2+\sigma_2^2}，\frac{\sigma_1^2\sigma_2^2}{\sigma_1^2+\sigma_2^2}) $
 </center>
+
+## One Steps Further
+
 
 ---
 [^1]: Gaussian Distribution，又称正态分布
