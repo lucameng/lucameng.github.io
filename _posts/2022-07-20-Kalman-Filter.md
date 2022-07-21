@@ -164,17 +164,17 @@ $
 
 ### Prediction
 
-将**加速度**等视作外部因素，只考虑小车本身的运动，有：
+- 将**加速度**等视作外部因素，只考虑小车本身的运动，有：
 
 <center>
 $
-x_{t+1}=x_{t}+\Delta t \dot{x}_{t}
+x_{t+1}=x_{t}+ \dot{x}_{t}\Delta t
 $
 </center>
 
 <center>
 $
-\dot{x}_{t+1}=\qquad \quad \dot{x}_{t}
+\dot{x}_{t+1}=\qquad \dot{x}_{t}
 $
 </center>
 
@@ -199,6 +199,34 @@ $
 <center>
 $
 Cov(\pmb{A}x)=\pmb{A}\Sigma\pmb{A}^T
+$
+</center>
+
+可得：
+
+<center>
+$
+\pmb{\hat{X}_{t+1}} = \pmb{F_{t+1}} \pmb{\hat{X}_{t}}
+$
+</center>
+
+<center>
+$
+\pmb{P_{t+1}} = \pmb{F_{t+1}} \pmb{P_{t}}\pmb{F_{t+1}}^T
+$
+</center>
+
+- 考虑外部因素$$ \pmb{u_k} $$，如引入**加速度** $$a$$:
+
+<center>
+$
+x_{t+1}=x_{t}+ \dot{x}_{t}\Delta t + \frac{1}{2} a \Delta t^2
+$
+</center>
+
+<center>
+$
+\dot{x}_{t+1}=\qquad \dot{x}_{t} + a \Delta t
 $
 </center>
 
