@@ -13,7 +13,7 @@ modified: 2022-07-21
 **Table of Contents**
 - [What is Kalman Filter(KF)?](#what-is-kalman-filterkf)
 - [As an example](#as-an-example)
-- [One steps further](#one-steps-further)
+- [One step further](#one-step-further)
 - [Multi-dimention](#multi-dimention)
   - [Prediction](#prediction)
   - [Correction](#correction)
@@ -77,7 +77,7 @@ $ N(\mu',{\sigma'}^2)=N(\mu_1,\sigma_1^2) \times N(\mu_2,\sigma_2^2)=N(\frac{\mu
 
 ---
 
-## One steps further
+## One step further
 
 下面将**感知过程**中的利用到的贝叶斯法则扩展到**多维**，这也是卡尔曼滤波的**核心**。
 
@@ -167,6 +167,8 @@ $
 
 ---
 
+
+
 ### Prediction
 
 将**加速度**等视作外部因素，只考虑小车本身的运动，有：
@@ -229,13 +231,13 @@ $
 
 <center>
 $
-x_{t}=x_{t-1}+ \dot{x}_{t-1}\Delta t + \frac{1}{2} \ddot{x_{t-1}} \Delta t^2
+x_{t}=x_{t-1}+ \dot{x}_{t-1}\Delta t + \frac{1}{2} \ddot{x}_{t-1} \Delta t^2
 $
 </center>
 
 <center>
 $
-\dot{x}_{t}=\qquad \quad \dot{x}_{t-1} \quad+\quad \ddot{x_{t-1}} \Delta t
+\dot{x}_{t}=\qquad \quad \dot{x}_{t-1} \quad+\quad \ddot{x}_{t-1} \Delta t
 $
 </center>
 
