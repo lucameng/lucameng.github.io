@@ -406,7 +406,7 @@ $
 
 <center>
 $
-\pmb{P'} = \pmb{P} - \pmb{K'}\pmb{HP} 
+\pmb{P'} = (1 - \pmb{K'}\pmb{H})\pmb{P} 
 $
 </center>
 
