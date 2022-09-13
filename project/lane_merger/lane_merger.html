@@ -1,0 +1,416 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>lane_merger module &#8212; lane_merger 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-lane_merger">
+<span id="lane-merger-module"></span><h1>lane_merger module<a class="headerlink" href="#module-lane_merger" title="Permalink to this headline">¶</a></h1>
+
+<br />
+<br />
+<dl class="py class">
+<dt class="sig sig-object py" id="lane_merger.SingleLane">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lane_merger.</span></span><span class="sig-name descname"><span class="pre">SingleLane</span></span><a class="headerlink" href="#lane_merger.SingleLane" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p class="rubric">The class of lane</p>
+<p>Definition:</p>
+<p>Each lane consists of 2 lane boundaries.
+In general, along with the direction of the road (or lane),
+the right_laneboundary is on the right side and left_lane
+boundary is on the left side, which is defined to be
+<cite>SingleLane.right_lane</cite> and <cite>SingleLane.left_lane</cite> respectively.
+By the way, the judgement of lane direction is yet to be
+implemented for no necessity.</p>
+<p>Each lane belongs to a road with a specific <cite>road_id</cite> and a
+lanegroup with a specific <cite>lanegroup_id</cite>.</p>
+<p>Any attribute that comes with the suffix <cite>_m</cite> is converted to
+unit of <cite>meter</cite>, e.g., <cite>SingleLane.left_lane_m</cite> and
+<cite>SingleLane.area_m</cite></p>
+<p>Here is the description of some attributes:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>left_lane: The geometry features of a laneboundary, probably</dt><dd><p>a list of points in order</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>left_lane_m: Same as above, but the unit of each point is</dt><dd><p>converted to <cite>meter</cite></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>area: Also a list of points, consists of <cite>left_lane</cite> and</dt><dd><p><cite>right_lane</cite>. Be awared that the sequence of <cite>left_lane</cite>
+is reversed, to apply to the definition of polygon that
+the points are arranged counter clockwise</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>area_m: Same as above, but the unit of each point is converted</dt><dd><p>to <cite>meter</cite></p>
+</dd>
+</dl>
+</li>
+<li><p>left_geoline: <cite>shapely</cite> geometry features, <cite>shapely.Linestring</cite> type</p></li>
+<li><p>geo_area: Also <cite>shapely</cite> geometry features, <cite>shapely.Polygon</cite> type</p></li>
+</ul>
+</dd></dl>
+
+<br />
+<br />
+<dl class="py function">
+<dt class="sig sig-object py" id="lane_merger.close_db">
+<span class="sig-prename descclassname"><span class="pre">lane_merger.</span></span><span class="sig-name descname"><span class="pre">close_db</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cur</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">con</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lane_merger.close_db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the cursor of database and connection with
+database are closed, if not, close them.</p>
+</dd></dl>
+
+<br />
+<br />
+<dl class="py function">
+<dt class="sig sig-object py" id="lane_merger.convert_str_to_float">
+<span class="sig-prename descclassname"><span class="pre">lane_merger.</span></span><span class="sig-name descname"><span class="pre">convert_str_to_float</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lane_merger.convert_str_to_float" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is designed for <cite>geometry</cite> field of table.</p>
+<p>Note that the information of z-axis is ignored, convert
+those digits from type <cite>str</cite> to <cite>float</cite>, then store to a
+list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>str_list</strong> – A <cite>str</cite> type string, contains the message of geometry.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;SRID=4326;LINESTRING(116.6264870390295 39.79060979560018 0, 116.6265049763024 39.79063259437680 0)&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">out</span> <span class="o">=</span> <span class="n">convert_str_to_float</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">out</span>
+<span class="go">[(116.6264870390295 39.79060979560018), (116.6265049763024 39.79063259437680)]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<br />
+<br />
+<dl class="py function">
+<dt class="sig sig-object py" id="lane_merger.get_args_from_terminal">
+<span class="sig-prename descclassname"><span class="pre">lane_merger.</span></span><span class="sig-name descname"><span class="pre">get_args_from_terminal</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lane_merger.get_args_from_terminal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get arguments from terminal</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>road_id</strong> – The <cite>road_id</cite> you want</p></li>
+<li><p><strong>lanegroup_id</strong> – The <cite>lanegroup_id</cite> you want</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Arguments you get from terminal</p>
+</dd>
+</dl>
+</dd></dl>
+
+<br />
+<br />
+<dl class="py function">
+<dt class="sig sig-object py" id="lane_merger.get_field_from_table">
+<span class="sig-prename descclassname"><span class="pre">lane_merger.</span></span><span class="sig-name descname"><span class="pre">get_field_from_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cur</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lane_merger.get_field_from_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a Dict, whose keys are related fields and
+values are corresponding to each key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cur</strong> – Cursor of SQLite.</p></li>
+<li><p><strong>table</strong> – The table you want to retrieve from.</p></li>
+<li><p><strong>kwargs</strong> – dict of <cite>field</cite>, <cite>order</cite> and <cite>orderby</cite>,where <cite>field</cite> is the key and <cite>order</cite>, <cite>orderby</cite> are elements of a tuple.</p></li>
+<br />
+
+<p>field: denotes <cite>field</cite> or <cite>attribute</cite> of a table.</p>
+<p>order: defines if you want to SELECT by order.</p>
+<p>orderby: the field you want to order by.</p>
+<br />
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A Dict, whose keys are related fields and values
+are corresponding to each key.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">msg_dict</span> <span class="o">=</span> <span class="n">get_field_from_table</span><span class="p">(</span>
+<span class="go">        cur, &#39;laneboundary&#39;,</span>
+<span class="go">        lane_roadid = (&#39;roadid&#39;, True, &#39;ogc_fid&#39;),</span>
+<span class="go">        lane_id = (&#39;lane_id&#39;, True, &#39;ogc_fid&#39;),</span>
+<span class="go">    )</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">msg_dict</span><span class="p">[</span><span class="s1">&#39;lane_roadid&#39;</span><span class="p">]</span>
+<span class="go">[0, 0, 1, 2, 2, ...]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<br />
+<br />
+<dl class="py function">
+<dt class="sig sig-object py" id="lane_merger.get_only_lanegroup">
+<span class="sig-prename descclassname"><span class="pre">lane_merger.</span></span><span class="sig-name descname"><span class="pre">get_only_lanegroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lane_msg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lane_merger.get_only_lanegroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>When there are several duplicated elements in a row within
+<cite>lane_msg[‘lanegroup_id’]</cite>, as an example, <cite>[1, 1, 1, 3, 3, 1]</cite>,
+drop redundant ones, so that it comes to <cite>[1, 3, 1]</cite>. It should
+be noticed that the output <cite>only_lanegroup</cite> is allowed to have
+duplicated elements which are not neighbors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>lane_msg</strong> – The dict of fields get from <cite>laneboundary</cite> table</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lane_msg</span><span class="p">[</span><span class="s1">&#39;lanegroup_id&#39;</span><span class="p">]</span>
+<span class="go">[12, 12, 12, 3, 3, 4, 12, 12]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lst</span> <span class="o">=</span> <span class="n">get_only_lanegroup</span><span class="p">(</span><span class="n">lane_msg</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lst</span>
+<span class="go">[12, 3, 4, 12]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<br />
+<br />
+<dl class="py function">
+<dt class="sig sig-object py" id="lane_merger.main">
+<span class="sig-prename descclassname"><span class="pre">lane_merger.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lane_merger.main" title="Permalink to this definition">¶</a></dt>
+<p class="rubric">Main process of <cite>lane_merger</p>
+<p>Get fields from table <cite>road</cite> and <cite>laneboundary</cite> through
+<cite>get_field_from_table()</cite> function, which returns a <cite>dict</cite>
+type interface, and the keys of dict are defined by yourself.</p>
+<p>Then remove all the records of laneboundary that have a
+<cite>boundarytype</cite> of <cite>GORE</cite> through <cite>remove_type()</cite> function.</p>
+<p>As a matter of fact, a single laneboundary might be cut into
+several segments, which have the same <cite>roadid</cite>, <cite>lane_id</cite>,
+<cite>lanegroup_id</cite> and different <cite>boundary_element_id</cite>. Merging
+those segments can be implemented by <cite>merge_segment()</cite> function.</p>
+<p>The core of the process is merging all laneboundary, which
+is implemented by <cite>merge_lane()</cite> function.</p>
+<p>An interface is added so that one can see the geometry feature
+more intuitive, <cite>meter</cite> as unit. See any attribute has the suffix
+<cite>_m</cite>.</p>
+<p>One can generate an example/case throuth <cite>case_generator()</cite>.</p>
+<p>The MAIN interface comes to a <cite>dict</cite>, <cite>all_message</cite>, here is
+the definition.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>relation_info: Information of the relative relation of a</dt><dd><p>laneboundary, which <cite>road_id</cite> and <cite>lanegroup_id</cite>
+does it belong to, for example, [0, 12] means
+<cite>road_id</cite> is <cite>0</cite> and <cite>lanegroup_id</cite> is <cite>12</cite>.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>lane_class: A list same as <cite>all_merge</cite>, to save the instances</dt><dd><p>of class <cite>SingleLane</cite>.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>group_geo: A list of points features, contains the boundary of</dt><dd><p>all lanegroup. The first point is the same as the last
+point, which means when those points are formed into
+lines, the figure is closed.</p>
+</dd>
+</dl>
+</li>
+<li><p>group_geo_m: <cite>meter</cite> as unit, same as above.</p></li>
+</ul>
+</dd></dl>
+
+<br />
+<br />
+<dl class="py function">
+<dt class="sig sig-object py" id="lane_merger.merge_lane">
+<span class="sig-prename descclassname"><span class="pre">lane_merger.</span></span><span class="sig-name descname"><span class="pre">merge_lane</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lane_msg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lane_merger.merge_lane" title="Permalink to this definition">¶</a></dt>
+<dd><p class="rubric">Merge all laneboundary</p>
+<p>This function outs a list, <cite>all_merge</cite>, and lists under
+<cite>all_merge</cite>, refer to different lanegroup. Each lanegroup
+contains mutiple instances of <cite>SingleLane</cite> class, which
+refer to different lane (each lane has two lane boundaries).</p>
+<p><cite>only_lanegroup</cite> stores the information of <cite>langroup_id</cite>.
+So <cite>only_lanegroup</cite> and <cite>lane_msg[‘road_id’]</cite> are used to
+traverse the table, with a specific logic.</p>
+<p>There is a certain mapping relation between the defined
+<cite>only_lanegroup</cite> and <cite>lane_msg[‘lanegroup_id’]</cite>, which you
+can see in the definition of <cite>get_only_lanegroup()</cite>.</p>
+<p>A certain <cite>road_id</cite> and a corresponding <cite>lanegroup_id</cite> specify
+a single lane, and the left and right lane boundaries are exactly
+two neighbors in the <cite>laneboundary</cite> table or more precisely,
+<cite>lane_msg</cite>. Therefore the traversal and retrieval can be more
+intuitive to operate.</p>
+</dd></dl>
+
+<br />
+<br />
+<dl class="py function">
+<dt class="sig sig-object py" id="lane_merger.merge_segment">
+<span class="sig-prename descclassname"><span class="pre">lane_merger.</span></span><span class="sig-name descname"><span class="pre">merge_segment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lane_msg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lane_merger.merge_segment" title="Permalink to this definition">¶</a></dt>
+<dd><p>In <cite>laneboundary</cite> table, there are some records that has
+the same <cite>roadid</cite>, <cite>lane_id</cite>, <cite>lanegroup_id</cite> and different
+<cite>boundary_element_id</cite>, which means these are actually
+several segments of one road.</p>
+<p>This function is designed to merge these segments, in every
+field of the table, including <cite>asewkt(GEOMETRY)</cite>. As one can
+see, the length of each field list is the same.</p>
+<p>Here is the logic of the merging. Assume that record-1 and
+record-2 are two segments of one lane, then after merging,
+record-1 is going to be dumped and <cite>geometry</cite> record of it
+is concatenated to the top of <cite>geometry</cite> of record-2. Therefore,
+two segments are merged geometrically.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>lane_msg</strong> – The dict of several fields get from <cite>laneboundary</cite>
+table.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Two interfaces, one is the information showing the relation
+between <cite>laneid</cite> and <cite>lanegroup_id</cite> in each record, another
+is the dict after the merge operation.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError</strong> – Exception handling to be implemented.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<br />
+<br />
+<dl class="py function">
+<dt class="sig sig-object py" id="lane_merger.remove_type">
+<span class="sig-prename descclassname"><span class="pre">lane_merger.</span></span><span class="sig-name descname"><span class="pre">remove_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg_dict</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lane_merger.remove_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check <cite>boundarytype</cite> field of each record in <cite>laneboundary</cite>
+table, delete the record when <cite>boundarytype</cite> is in args, e.g.,
+<cite>GORE</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>msg_dict</strong> – The dict of fields get from <cite>laneboundary</cite> table</p></li>
+<li><p><strong>args</strong> – Any type you want to remove from the table</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>New dict after dumping args</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<br />
+<br />
+<dl class="py function">
+<dt class="sig sig-object py" id="lane_merger.case_generator">
+<span class="sig-prename descclassname"><span class="pre">lane_merger.</span></span><span class="sig-name descname"><span class="pre">case_generator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_geometry</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lane_merger.case_generator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a case that can be visualize in QGis</p>
+<p>The case is a whole lanegroup with all its single lanes.
+Call <cite>get_args_from_terminal()</cite> to get parameters from the
+terminal and search for the corresponding geometry features,
+finally export to a <cite>.shp</cite> file which can be displayed and
+processed in QGis.</p>
+<p>The information of generating case will prompt on the
+terminal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>msg_dict</strong> – Contains all features, is defined in <cite>main()</cite></p></li>
+<li><p><strong>group_geometry</strong> – The geometry infomation which is also
+defined in <cite>main()</cite></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">lane_merger</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Luca Meng.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/lane_merger.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

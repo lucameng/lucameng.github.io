@@ -8,3 +8,9 @@
 
 - title: Friends & Folks
   url: /folks/
+
+- title: ADAS Message Processor
+  url: /project/adas_v2_message_processor
+
+- title: Lane Merger
+  url: /project/lane_merger
