@@ -126,10 +126,10 @@ $ a + b = c $
 
 ```tex
 \begin{equation}
-    \begin{align}
+    \begin{aligned}
         a + b &= c + d \\
             &= e
-    \end{align}
+    \end{aligned}
 \end{equation}
 ```
 
