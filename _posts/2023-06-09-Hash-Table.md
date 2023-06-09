@@ -1,3 +1,4 @@
+---
 layout: post
 title: Implementation of Hash Table
 description: "哈希表的C++实现"
@@ -5,12 +6,9 @@ tags: [cpp]
 image:
   feature: abstract-10.jpg
 modified: 2023-06-09
-
-
 ---
 
 ```cpp
-
 #include <iostream>
 #include <vector>
 
